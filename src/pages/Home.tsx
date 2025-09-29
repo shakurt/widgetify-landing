@@ -10,6 +10,7 @@ import {
 import { FaBrave } from 'react-icons/fa6'
 import { TypeAnimation } from 'react-type-animation'
 import ContributorsSection from '../components/ContributorsSection'
+import DonationCards from '../components/DonationCards'
 import { useDocumentTitle } from '../hooks'
 
 const CHROME_EXTENSION_URL =
@@ -404,6 +405,19 @@ export function Home() {
 							</div>
 						</div>
 					</div>
+
+					<section className="mt-16">
+						<div className="mb-4 text-center">
+							<h2 className="mb-2 text-3xl font-bold text-gray-900">
+								حمایت کنندگان 💙
+							</h2>
+							<p className="max-w-2xl mx-auto text-lg text-gray-600">
+								از تمامی حامیان و کاربرانی که به توسعه ویجتی‌فای کمک
+								کرده‌اند، سپاسگزاریم
+							</p>
+						</div>
+						<DonationCards />
+					</section>
 
 					<ContributorsSection />
 				</div>

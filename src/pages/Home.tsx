@@ -232,7 +232,7 @@ export function Home() {
 								{browserExtensions.slice(1).map((browser) => (
 									<a
 										key={browser.name}
-										className={`group relative flex items-center px-6 py-3 font-medium transition-all duration-300 rounded-xl ${
+										className={`group relative flex items-center px-6 py-3 font-medium transition-all duration-300 rounded-2xl ${
 											browser.isAvailable
 												? 'bg-white border-2 border-gray-200 text-gray-700 hover:bg-gray-50 hover:border-blue-300 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-300 focus:ring-opacity-50'
 												: 'opacity-50 cursor-not-allowed bg-gray-100 border-2 border-gray-100 text-gray-500'
@@ -406,7 +406,7 @@ export function Home() {
 						</div>
 					</div>
 
-					<section className="mt-16">
+					<section className="flex flex-col gap-2 mt-16">
 						<div className="mb-4 text-center">
 							<h2 className="mb-2 text-3xl font-bold text-gray-900">
 								حمایت کنندگان 💙
@@ -417,6 +417,27 @@ export function Home() {
 							</p>
 						</div>
 						<DonationCards />
+						<div className="self-center">
+							{/* <a
+								href="https://reymit.ir/widgetify"
+								target="_blank"
+								rel="noopener noreferrer"
+								className="inline-flex items-center px-4 py-2 text-lg font-medium text-white transition-all duration-300 shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-xl"
+							>
+								حمایت کنید
+								<ExternalLink className="w-4 h-4 mr-2" />
+							</a> */}
+							<div className="flex justify-center mt-6">
+								<a
+									href="https://github.com/widgetify-app"
+									target="_blank"
+									rel="noopener noreferrer"
+									className="flex items-center px-4 py-2 text-sm text-gray-600 transition-colors bg-white border border-gray-400 hover:bg-gray-50 hover:border-blue-400 rounded-2xl"
+								>
+									🎁 حمایت کنید
+								</a>
+							</div>
+						</div>
 					</section>
 
 					<ContributorsSection />

@@ -30,7 +30,7 @@ const fetchContributors = async () => {
 				throw new Error(json.message || 'خطایی رخ داد')
 			}
 			return json
-		}),
+		})
 	)
 
 	const contributorMap = new Map()
@@ -45,7 +45,7 @@ const fetchContributors = async () => {
 	})
 
 	const uniqueContributors = Array.from(contributorMap.values()).sort(
-		(a, b) => b.contributions - a.contributions,
+		(a, b) => b.contributions - a.contributions
 	)
 
 	return uniqueContributors
@@ -96,7 +96,7 @@ export default function ContributorsSection() {
 							href="https://github.com/widgetify-app"
 							target="_blank"
 							rel="noopener noreferrer"
-							className="flex items-center px-4 py-2 text-sm text-gray-600 transition-all duration-300 border rounded-md hover:bg-gray-50 hover:border-blue-400 hover:shadow-sm"
+							className="flex items-center px-4 py-2 text-sm text-gray-600 transition-all duration-300 border border-gray-400 hover:bg-gray-50 hover:border-blue-400 hover:shadow-sm rounded-2xl"
 						>
 							<Github size={18} className="ml-2" />
 							مشارکت در گیت‌هاب

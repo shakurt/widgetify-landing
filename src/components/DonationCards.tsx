@@ -14,11 +14,7 @@ const formatAmount = (amount: number) => {
 }
 
 export default function DonationCards() {
-	const { data: donations = [], error } = useDonations()
-
-	if (error) {
-		console.error('Failed to fetch donations:', error)
-	}
+	const { data: donations = [] } = useDonations()
 
 	return (
 		<div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">

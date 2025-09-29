@@ -418,18 +418,9 @@ export function Home() {
 						</div>
 						<DonationCards />
 						<div className="self-center">
-							{/* <a
-								href="https://reymit.ir/widgetify"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="inline-flex items-center px-4 py-2 text-lg font-medium text-white transition-all duration-300 shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-xl"
-							>
-								حمایت کنید
-								<ExternalLink className="w-4 h-4 mr-2" />
-							</a> */}
 							<div className="flex justify-center mt-6">
 								<a
-									href="https://github.com/widgetify-app"
+									href="http://ref.widgetify.ir/donate"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="flex items-center px-4 py-2 text-sm text-gray-600 transition-colors bg-white border border-gray-400 hover:bg-gray-50 hover:border-blue-400 rounded-2xl"

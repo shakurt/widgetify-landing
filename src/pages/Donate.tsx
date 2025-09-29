@@ -27,7 +27,7 @@ export default function Donate() {
 					</p>
 
 					<a
-						href="https://reymit.ir/widgetify"
+						href="http://ref.widgetify.ir/donate"
 						target="_blank"
 						rel="noopener noreferrer"
 						className="inline-flex items-center px-8 py-4 text-lg font-medium text-white transition-all duration-300 shadow-lg bg-gradient-to-r from-blue-600 to-purple-600 rounded-2xl hover:from-blue-700 hover:to-purple-700 hover:scale-105 hover:shadow-xl"
@@ -70,7 +70,7 @@ export default function Donate() {
 									ارائه می‌دهد
 								</p>
 								<a
-									href="https://reymit.ir/widgetify"
+									href="http://ref.widgetify.ir/donate"
 									target="_blank"
 									rel="noopener noreferrer"
 									className="inline-flex items-center px-8 py-4 font-semibold text-blue-600 transition-all duration-300 bg-white shadow-lg rounded-2xl hover:bg-blue-50 hover:scale-105"

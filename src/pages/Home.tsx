@@ -8,6 +8,7 @@ import {
 	FaOpera,
 } from 'react-icons/fa'
 import { FaBrave } from 'react-icons/fa6'
+import { Link } from 'react-router-dom'
 import { TypeAnimation } from 'react-type-animation'
 import ContributorsSection from '../components/ContributorsSection'
 import DonationCards from '../components/DonationCards'
@@ -416,17 +417,15 @@ export function Home() {
 								کرده‌اند، سپاسگزاریم
 							</p>
 						</div>
-						<DonationCards />
+						<DonationCards count={8} />
 						<div className="self-center">
 							<div className="flex justify-center mt-6">
-								<a
-									href="http://ref.widgetify.ir/donate"
-									target="_blank"
-									rel="noopener noreferrer"
+								<Link
+									to="/donate"
 									className="flex items-center px-4 py-2 text-sm text-gray-600 transition-colors bg-white border border-gray-400 hover:bg-gray-50 hover:border-blue-400 rounded-2xl"
 								>
 									🎁 حمایت کنید
-								</a>
+								</Link>
 							</div>
 						</div>
 					</section>

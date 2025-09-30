@@ -1,10 +1,16 @@
 import { ExternalLink, Sparkles } from 'lucide-react'
+import { useEffect } from 'react'
 import ContainerWrapper from '../components/ContainerWrapper'
 import DonationCards from '../components/DonationCards'
 import { useDocumentTitle } from '../hooks'
 
 export default function Donate() {
 	useDocumentTitle('حمایت از ویجتی‌فای')
+
+	useEffect(() => {
+		// scroll to Top
+		window.scrollTo(0, 0)
+	}, [])
 
 	return (
 		<div className="min-h-screen bg-gradient-to-br from-blue-50 via-white to-purple-50">
@@ -52,7 +58,7 @@ export default function Donate() {
 							</p>
 						</div>
 
-						<DonationCards />
+						<DonationCards count={null} />
 					</section>
 
 					{/* Final CTA Section */}

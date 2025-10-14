@@ -175,7 +175,7 @@ export function Home() {
 						<div className="flex flex-wrap justify-center gap-6 py-4 animate-fade-in-up">
 							<div className="text-center">
 								<div className="text-2xl font-bold text-blue-600">
-									+15 هزار
+									+20 هزار
 								</div>
 								<div className="text-xs text-gray-500">نصب فعال</div>
 							</div>

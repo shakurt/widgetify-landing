@@ -13,6 +13,22 @@ const formatAmount = (amount: number) => {
 	return new Intl.NumberFormat('fa-IR').format(amount)
 }
 
+const getCurrencySymbol = (currency: string) => {
+	switch (currency.toUpperCase()) {
+		case 'USD':
+			return '$'
+		case 'EUR':
+			return '€'
+		case 'GBP':
+			return '£'
+		case 'TOMAN':
+		case 'IRR':
+			return 'تومان'
+		default:
+			return currency
+	}
+}
+
 interface Prop {
 	count: number | null
 }
@@ -42,10 +58,13 @@ export default function DonationCards({ count }: Prop) {
 
 						<div className="mb-4 text-center">
 							<p className="mb-1 text-sm text-gray-500">مبلغ حمایت</p>
-							<p className="text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600">
-								{formatAmount(donation.toman_amount)}
-								<span className="mr-1 text-xl">تومان</span>
-							</p>
+
+							<div className="flex items-center justify-center text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-green-500 to-emerald-600 gap-0.5">
+								{formatAmount(donation.amount)}
+								<span className="mr-1 text-lg" dir="auto">
+									{getCurrencySymbol(donation.currency)}
+								</span>
+							</div>
 						</div>
 
 						<div className="p-3 mb-4 overflow-y-auto text-center border border-gray-100 rounded-lg bg-gray-50 max-h-20 min-h-20">

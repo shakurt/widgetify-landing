@@ -7,6 +7,7 @@ export interface Donation {
 	toman_amount: number
 	name: string
 	description: string
+	avatar?: string | null
 }
 
 export interface DonationResponse {

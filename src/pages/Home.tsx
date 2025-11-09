@@ -417,7 +417,7 @@ export function Home() {
 								کرده‌اند، سپاسگزاریم
 							</p>
 						</div>
-						<DonationCards count={8} />
+						<DonationCards count={9} />
 						<div className="self-center">
 							<div className="flex justify-center mt-6">
 								<Link

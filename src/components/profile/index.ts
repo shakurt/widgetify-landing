@@ -1,5 +1,0 @@
-export { default as EditProfileForm } from './EditProfileForm'
-export { default as ProfileAvatarUpload } from './ProfileAvatarUpload'
-export { default as ProfileFormField } from './ProfileFormField'
-export { default as ProfileDatePicker } from './ProfileDatePicker'
-export { default as ProfileFormButtons } from './ProfileFormButtons'

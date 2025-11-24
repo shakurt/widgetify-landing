@@ -56,5 +56,15 @@
   },
   "typescript.tsdk": "node_modules/typescript/lib",
   "typescript.enablePromptUseWorkspaceTsdk": true,
-  "cSpell.words": ["Vazirmatn", "widgetify"]
+  "cSpell.words": [
+    "Vazirmatn",
+    "widgetify",
+    "انتقادات",
+    "پیشنهاد",
+    "حریم",
+    "حمایت",
+    "خصوصی",
+    "ورود",
+    "ویجتی"
+  ]
 }

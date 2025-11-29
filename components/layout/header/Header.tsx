@@ -2,7 +2,7 @@
 import { useState } from "react";
 
 import { Menu } from "lucide-react";
-import { useWindowScroll } from "react-use";
+import { useMountedState, useWindowScroll } from "react-use";
 
 import NavLinkList from "@/components/layout/header/NavLinkList";
 import Sidebar from "@/components/layout/header/Sidebar";
@@ -10,13 +10,15 @@ import FullLogo from "@/components/logo/FullLogo";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const isMounted = useMountedState();
 
   const { y } = useWindowScroll();
-  const isScrolled = y > 10;
+  const isScrolled = isMounted() && y > 10;
 
   return (
     // TODO: check for shadow transition
-    <header
+    <div
+      aria-label="navbar container"
       className={`sticky top-0 z-50 bg-white transition-[shadow] duration-200 ${
         isScrolled ? "shadow-md" : "shadow-sm"
       }`}
@@ -41,7 +43,7 @@ const Header = () => {
       </div>
 
       <Sidebar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
-    </header>
+    </div>
   );
 };
 

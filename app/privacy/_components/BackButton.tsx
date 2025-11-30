@@ -11,21 +11,32 @@ type BackButtonProps = {
 
 const BackButton: React.FC<BackButtonProps> = ({ lang }) => {
   return (
-    <div className="border-t py-4" aria-label="Back Link Button Container">
+    <nav className="border-t pt-4 pb-2" aria-label="Privacy page navigation">
       <Link
         href="/"
-        className="inline-flex items-center gap-1 text-blue-600 hover:underline"
-        aria-label="Navigate Back To Home Page"
+        className="inline-flex items-center gap-1.5 text-sm text-blue-600 underline-offset-2 hover:underline sm:text-base"
+        aria-label={
+          isLanguageFa(lang) ? "بازگشت به صفحه اصلی" : "Return to Home Page"
+        }
       >
         {isLanguageFa(lang) ? (
-          <FaArrowRightLong size={16} />
+          <FaArrowRightLong
+            size={14}
+            className="sm:h-4 sm:w-4"
+            aria-hidden="true"
+          />
         ) : (
-          <FaArrowLeftLong size={16} />
+          <FaArrowLeftLong
+            size={14}
+            className="sm:h-4 sm:w-4"
+            aria-hidden="true"
+          />
         )}
-
-        {isLanguageFa(lang) ? "بازگشت به صفحه اصلی" : "Return to Home Page"}
+        <span>
+          {isLanguageFa(lang) ? "بازگشت به صفحه اصلی" : "Return to Home Page"}
+        </span>
       </Link>
-    </div>
+    </nav>
   );
 };
 

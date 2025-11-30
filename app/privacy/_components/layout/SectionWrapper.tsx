@@ -18,9 +18,12 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
   ariaLabel,
 }) => {
   return (
-    <section aria-label={ariaLabel}>
+    <section
+      aria-labelledby={`section-${ariaLabel.replace(/\s+/g, "-").toLowerCase()}`}
+    >
       <h2
-        className="mb-3 border-b pb-2 text-xl font-bold"
+        id={`section-${ariaLabel.replace(/\s+/g, "-").toLowerCase()}`}
+        className="mb-3 border-b pb-2 text-base font-bold sm:text-lg md:text-xl"
         {...(!isLanguageFa(lang) && {
           style: { fontFamily: "system-ui, -apple-system, sans-serif" },
         })}
@@ -28,7 +31,7 @@ const SectionWrapper: React.FC<SectionWrapperProps> = ({
         {isLanguageFa(lang) ? titleFa : titleEn}
       </h2>
       <div
-        className={`space-y-3 text-gray-700 ${isLanguageFa(lang) ? "mr-4" : "ml-4"}`}
+        className={`space-y-2 text-sm text-gray-700 sm:space-y-3 sm:text-base ${isLanguageFa(lang) ? "mr-3 sm:mr-4" : "ml-3 sm:ml-4"}`}
       >
         {children}
       </div>

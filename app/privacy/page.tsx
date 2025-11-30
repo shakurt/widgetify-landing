@@ -29,12 +29,12 @@ const PrivacyPage: React.FC<PrivacyPageProps> = async ({ searchParams }) => {
   const { lang = "fa" } = await searchParams;
 
   return (
-    <section
+    <article
       {...(!isLanguageFa(lang) ? { dir: "ltr" } : { dir: "rtl" })}
-      aria-label="Privacy Policy Page"
+      className="min-h-screen"
     >
       <Header lang={lang} />
-      <section className="container max-w-4xl space-y-9">
+      <div className="container max-w-4xl space-y-6 py-6 sm:space-y-8 sm:py-8 md:space-y-9">
         <Introduction lang={lang} />
 
         <CollectedInformation lang={lang} />
@@ -62,8 +62,8 @@ const PrivacyPage: React.FC<PrivacyPageProps> = async ({ searchParams }) => {
         <OpenSourceNote lang={lang} />
 
         <BackButton lang={lang} />
-      </section>
-    </section>
+      </div>
+    </article>
   );
 };
 

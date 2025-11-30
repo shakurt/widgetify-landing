@@ -21,30 +21,40 @@ const ContactUs: React.FC<ContactUsProps> = ({ lang }) => {
     >
       {isLanguageFa(lang) ? (
         <>
-          <p>
+          <p className="leading-relaxed">
             اگر سؤالی درباره این سیاست حریم خصوصی دارید، لطفاً از طریق ایمیل زیر
             با ما تماس بگیرید:
           </p>
           <a
-            className="mt-1 flex items-center gap-2 text-blue-600 hover:underline"
+            className="mt-2 flex w-fit items-center gap-1.5 text-sm text-blue-600 underline-offset-2 hover:underline sm:gap-2 sm:text-base"
             href={MAILTO_PRIVACY}
+            aria-label="Send email to privacy@widgetify.ir"
           >
-            <MdOutgoingMail size={17.5} className="mb-0.5" />
-            privacy@widgetify.ir
+            <MdOutgoingMail
+              size={16}
+              className="mb-0.5 sm:h-[18px] sm:w-[18px]"
+              aria-hidden="true"
+            />
+            <span>privacy@widgetify.ir</span>
           </a>
         </>
       ) : (
         <>
-          <p>
+          <p className="leading-relaxed">
             If you have any questions about this privacy policy, please contact
             us via the email below:
           </p>
           <a
-            className="mt-1 flex items-center gap-2 text-blue-600 hover:underline"
+            className="mt-2 flex w-fit items-center gap-1.5 text-sm text-blue-600 underline-offset-2 hover:underline sm:gap-2 sm:text-base"
             href={MAILTO_PRIVACY}
+            aria-label="Send email to privacy@widgetify.ir"
           >
-            <MdOutgoingMail size={17.5} className="mb-0.5 scale-x-[-1]" />
-            privacy@widgetify.ir
+            <MdOutgoingMail
+              size={16}
+              className="mb-0.5 scale-x-[-1] sm:h-[18px] sm:w-[18px]"
+              aria-hidden="true"
+            />
+            <span>privacy@widgetify.ir</span>
           </a>
         </>
       )}

@@ -15,7 +15,7 @@ const DataUsage: React.FC<DataUsageProps> = ({ lang }) => {
       titleFa="۴. استفاده از داده‌ها"
       ariaLabel="Data Usage Section"
     >
-      <p>
+      <p className="leading-relaxed">
         {isLanguageFa(lang)
           ? "در صورتی که شما به صورت اختیاری نام و ایمیل خود را ارائه کنید، ما از این اطلاعات تنها برای همگام‌سازی تنظیمات شما بین دستگاه‌های مختلف استفاده می‌کنیم."
           : "If you optionally provide your name and email, we will only use this information to synchronize your settings across different devices."}

@@ -17,42 +17,50 @@ const DataProtection: React.FC<DataProtectionProps> = ({ lang }) => {
     >
       {isLanguageFa(lang) ? (
         <>
-          <p>
+          <p className="leading-relaxed">
             ویجتی‌فای از مکانیزم‌های قوی برای حفاظت از داده‌های حساس کاربران
             استفاده می‌کند:
           </p>
-          <h3 className="mb-2 text-lg font-semibold">
+          <h3 className="mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg">
             حفاظت از داده‌های گوگل:
           </h3>
-          <ul className="mr-6 list-disc space-y-2">
-            <li>
+          <ul
+            className="mr-5 list-disc space-y-1.5 sm:mr-6 sm:space-y-2"
+            role="list"
+          >
+            <li className="leading-relaxed">
               <strong>OAuth 2.0:</strong> از پروتکل امن OAuth 2.0 برای احراز
               هویت و دسترسی به داده‌های گوگل استفاده می‌کنیم
             </li>
-            <li>
+            <li className="leading-relaxed">
               <strong>دسترسی محدود:</strong> فقط به حداقل دسترسی‌های مورد نیاز
               (تقویم) درخواست می‌کنیم
             </li>
-            <li>
+            <li className="leading-relaxed">
               <strong>عدم ذخیره‌سازی:</strong> داده‌های دریافتی از گوگل در
               سرورهای ما ذخیره نمی‌شوند
             </li>
-            <li>
+            <li className="leading-relaxed">
               <strong>انقضای توکن:</strong> توکن‌های دسترسی دارای مدت زمان محدود
               هستند و به طور منظم تجدید می‌شوند
             </li>
           </ul>
-          <h3 className="text-lg font-semibold">حفاظت از داده‌های کاربر:</h3>
-          <ul className="mr-6 list-disc space-y-2">
-            <li>
+          <h3 className="mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg">
+            حفاظت از داده‌های کاربر:
+          </h3>
+          <ul
+            className="mr-5 list-disc space-y-1.5 sm:mr-6 sm:space-y-2"
+            role="list"
+          >
+            <li className="leading-relaxed">
               <strong>هشینگ رمز عبور:</strong> رمزهای عبور با استفاده از
               الگوریتم‌های قوی هش می‌شوند
             </li>
-            <li>
+            <li className="leading-relaxed">
               <strong>دسترسی محدود:</strong> فقط پرسنل مجاز به سیستم‌های پایگاه
               داده دسترسی دارند
             </li>
-            <li>
+            <li className="leading-relaxed">
               <strong>نظارت و لاگ:</strong> تمام دسترسی‌ها به داده‌ها ثبت و
               نظارت می‌شوند
             </li>

@@ -15,7 +15,7 @@ const DataSharing: React.FC<DataSharingProps> = ({ lang }) => {
       titleFa="۶. اشتراک‌گذاری داده‌ها"
       ariaLabel="Sharing Data Section"
     >
-      <p>
+      <p className="leading-relaxed">
         {isLanguageFa(lang)
           ? "ویجتی‌فای هیچ داده کاربری را با اشخاص ثالث به اشتراک نمی‌گذارد."
           : "Widgetify does not share any user data with third parties."}

@@ -11,27 +11,38 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ lang }) => {
   return (
-    <header className="border-b bg-gray-50 py-8">
+    <header className="border-b bg-gray-50 py-6 md:py-8" role="banner">
       <div className="container max-w-4xl">
-        <div className="flex items-center justify-between">
-          <div className="flex items-center gap-3" aria-label="title group">
-            <Shield size={24} className="text-blue-600" />
-            <h2 className="text-2xl font-bold">
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="flex items-center gap-2 sm:gap-3">
+            <Shield
+              size={20}
+              className="text-blue-600 sm:h-6 sm:w-6"
+              aria-hidden="true"
+            />
+            <h1 className="text-xl font-bold sm:text-2xl md:text-3xl">
               {isLanguageFa(lang)
                 ? "سیاست حفظ حریم خصوصی ویجتی‌فای"
                 : "Widgetify Privacy Policy"}
-            </h2>
+            </h1>
           </div>
           <Link
             href={`/privacy?lang=${isLanguageFa(lang) ? "en" : "fa"}`}
-            className="flex cursor-pointer items-center gap-1 rounded-md border bg-white px-3 py-1 text-sm text-gray-700 transition-colors duration-200 hover:bg-gray-50"
+            className="flex w-fit items-center gap-1 rounded-md border bg-white px-3 py-1.5 text-xs text-gray-700 transition-colors duration-200 hover:bg-gray-50 sm:text-sm"
+            aria-label={
+              isLanguageFa(lang) ? "Switch to English" : "تغییر به فارسی"
+            }
           >
-            <Globe size={16} />
+            <Globe
+              size={14}
+              className={`sm:h-4 sm:w-4 ${isLanguageFa(lang) && "mb-1"}`}
+              aria-hidden="true"
+            />
             <span>{isLanguageFa(lang) ? "English" : "فارسی"}</span>
           </Link>
         </div>
         <p
-          className="mt-2 text-gray-500"
+          className="mt-3 text-xs text-gray-500 sm:text-sm"
           {...(!isLanguageFa(lang) && {
             style: { fontFamily: "system-ui, -apple-system, sans-serif" },
           })}

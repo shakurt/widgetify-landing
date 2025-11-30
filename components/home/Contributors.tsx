@@ -1,12 +1,14 @@
 import { Github } from "lucide-react";
 
+import { getContributors } from "@/app/lib/data";
+import { GITHUB_LINK } from "@/constants";
+
 interface Contributor {
   login: string;
   avatar_url: string;
   html_url: string;
   contributions: number;
 }
-import { getContributors } from "@/app/lib/data";
 
 const ContributorsSection = async () => {
   const contributors = await getContributors();
@@ -46,7 +48,7 @@ const ContributorsSection = async () => {
           </div>
           <div className="flex justify-center">
             <a
-              href="https://github.com/widgetify-app"
+              href={GITHUB_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center rounded-2xl border border-gray-400 px-4 py-2 text-sm text-gray-600 transition-all duration-300 hover:border-blue-400 hover:bg-gray-50 hover:shadow-sm"
@@ -67,7 +69,7 @@ const ContributorsSection = async () => {
           </p>
           <div className="mt-6 flex justify-center">
             <a
-              href="https://github.com/widgetify-app"
+              href={GITHUB_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center rounded-md border bg-white px-4 py-2 text-sm text-gray-600 transition-colors hover:border-blue-400 hover:bg-gray-50"

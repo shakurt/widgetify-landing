@@ -1,9 +1,11 @@
 import FooterLink from "./FooterLink";
 const QuickLinks = () => {
   return (
-    <section>
-      <h3 className="mb-2 text-lg font-bold">دسترسی سریع</h3>
-      <ul className="space-y-2 text-gray-600">
+    <nav aria-labelledby="quick-links-heading">
+      <h3 id="quick-links-heading" className="mb-2 text-lg font-bold">
+        دسترسی سریع
+      </h3>
+      <ul className="space-y-2 text-gray-600" role="list">
         <li>
           <FooterLink href="/">صفحه اصلی</FooterLink>
         </li>
@@ -11,7 +13,7 @@ const QuickLinks = () => {
           <FooterLink href="/donate">حمایت مالی</FooterLink>
         </li>
       </ul>
-    </section>
+    </nav>
   );
 };
 

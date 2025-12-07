@@ -18,7 +18,11 @@ import SocialLink from "./SocialLink";
 
 const Social = () => {
   return (
-    <div className="container flex items-center justify-center gap-3">
+    <nav
+      className="container flex items-center justify-center gap-3"
+      aria-label="شبکه‌های اجتماعی"
+      role="navigation"
+    >
       <SocialLink
         ariaLabel="Discord"
         href={DISCORD_LINK}
@@ -54,7 +58,7 @@ const Social = () => {
       <SocialLink href={X_LINK} className="hover:bg-blue-400" ariaLabel="X">
         <FaTwitter />
       </SocialLink>
-    </div>
+    </nav>
   );
 };
 

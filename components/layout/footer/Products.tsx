@@ -4,9 +4,16 @@ import FooterLink from "./FooterLink";
 
 const Products = () => {
   return (
-    <section>
-      <h3 className="mb-2 text-lg font-bold">محصولات</h3>
-      <ul className="space-y-2">
+    <nav
+      aria-labelledby="products-heading"
+      itemScope
+      itemType="https://schema.org/ItemList"
+    >
+      <h3 id="products-heading" className="mb-2 text-lg font-bold">
+        محصولات
+      </h3>
+      <meta itemProp="name" content="محصولات ویجتی‌فای" />
+      <ul className="space-y-2" role="list">
         <li>
           <FooterLink href={CHROME_EXTENSION_URL} target="_blank">
             اکستنشن مرورگر
@@ -29,7 +36,7 @@ const Products = () => {
           <FooterLink comingSoon={true}>نسخه iOS</FooterLink>
         </li>
       </ul>
-    </section>
+    </nav>
   );
 };
 

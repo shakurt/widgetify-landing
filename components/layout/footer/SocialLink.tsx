@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 import { twMerge } from "tailwind-merge";
 
 type SocialLinkProps = {
@@ -21,15 +19,16 @@ const SocialLink = ({
   );
 
   return (
-    <Link
+    <a
       href={href}
       target="_blank"
       rel="noopener noreferrer"
       className={mergedClassName}
-      aria-label={`${ariaLabel} Link`}
+      aria-label={`لینک به ${ariaLabel}`}
+      itemProp="sameAs"
     >
       {children}
-    </Link>
+    </a>
   );
 };
 

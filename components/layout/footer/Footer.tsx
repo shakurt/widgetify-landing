@@ -7,16 +7,23 @@ import SubFooter from "./SubFooter";
 
 const Footer = () => {
   return (
-    <footer className="bg-linear-to-br from-gray-50 to-gray-100 pt-6">
+    <footer
+      className="bg-linear-to-br from-gray-50 to-gray-100 pt-6"
+      role="contentinfo"
+      aria-label="اطلاعات پایین صفحه"
+    >
       <div className="container">
         <Brand />
         <Social />
 
-        <div className="container my-8 grid grid-cols-1 gap-8 md:grid-cols-3">
+        <nav
+          className="container my-8 grid grid-cols-1 gap-8 md:grid-cols-3"
+          aria-label="لینک‌های فوتر"
+        >
           <QuickLinks />
           <Products />
           <Newsletter />
-        </div>
+        </nav>
       </div>
 
       <SubFooter />

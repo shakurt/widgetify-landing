@@ -59,6 +59,16 @@ const Newsletter = () => {
           disabled={isLoading}
           aria-label="آدرس ایمیل برای خبرنامه"
         />
+        {message && (
+          <p
+            className={`mr-1 mb-2 text-xs ${
+              message.type === "success" ? "text-green-600" : "text-red-600"
+            }`}
+            role="alert"
+          >
+            {message.text}
+          </p>
+        )}
         <button
           type="submit"
           disabled={isLoading}
@@ -68,16 +78,6 @@ const Newsletter = () => {
           {isLoading ? "درحال ارسال..." : "ثبت"}
         </button>
       </form>
-      {message && (
-        <p
-          className={`mt-2 text-xs ${
-            message.type === "success" ? "text-green-600" : "text-red-600"
-          }`}
-          role="alert"
-        >
-          {message.text}
-        </p>
-      )}
     </section>
   );
 };

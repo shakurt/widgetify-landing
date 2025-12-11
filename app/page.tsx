@@ -1,5 +1,6 @@
 // import { TypeAnimation } from "react-type-animation";
 
+import AnimateOnScroll from "@/components/animations/AnimateOnScroll";
 import Contributors from "@/components/home/Contributors";
 import DownloadButtons from "@/components/home/DownloadButtons";
 import Features from "@/components/home/Features";
@@ -24,7 +25,7 @@ const Home = () => {
         <div className="container flex flex-col gap-6">
           <section className="animate-fade-in flex flex-col items-center justify-center gap-4">
             <h1 className="animate-slide-down py-1 text-center text-4xl font-bold md:text-6xl lg:text-7xl">
-              <span className="bg-linear-to-r from-blue-600 to-blue-700 bg-clip-text text-transparent">
+              <span className="bg-linear-to-r from-blue-600 to-blue-700 bg-clip-text text-blue-600 [-webkit-text-fill-color:transparent] supports-[background-clip:text]:text-transparent">
                 نیوتب مرورگرت رو
               </span>
 
@@ -63,7 +64,9 @@ const Home = () => {
 
           <MoreFeaturesComing />
 
-          <Supporters />
+          <AnimateOnScroll className="slide-up">
+            <Supporters />
+          </AnimateOnScroll>
 
           <Contributors />
         </div>

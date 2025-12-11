@@ -1,4 +1,3 @@
-import type { Donation } from "@/app/lib/data";
 import { getDonations } from "@/app/lib/data";
 
 import SupporterDonationCard from "./SupporterDonationCard";
@@ -15,15 +14,15 @@ const SupportersDonation = async ({ count }: Prop) => {
   // console.log(donations);
 
   return (
-    <section className="space-y-6">
-      <div
-        className={
-          "grid auto-rows-min grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
-        }
-      >
+    <div
+      className="animate-fade-in-up space-y-6"
+      role="feed"
+      aria-label="لیست حمایت‌های اخیر"
+    >
+      <div className="grid auto-rows-min grid-cols-1 gap-3 sm:grid-cols-2 sm:gap-4 lg:grid-cols-3 xl:grid-cols-4">
         {donations.map((donation, index) => (
           <SupporterDonationCard
-            key={donation.name}
+            key={`${donation.name}-${donation.time}-${index}`}
             index={index}
             name={donation.name}
             avatar={donation.avatar}
@@ -34,7 +33,7 @@ const SupportersDonation = async ({ count }: Prop) => {
           />
         ))}
       </div>
-    </section>
+    </div>
   );
 };
 

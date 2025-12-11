@@ -72,7 +72,7 @@ const Newsletter = () => {
         <button
           type="submit"
           disabled={isLoading}
-          className="w-full cursor-pointer rounded-lg bg-blue-600 px-3 py-2 text-sm font-medium text-white transition-colors hover:bg-blue-700 disabled:opacity-50"
+          className="btn-base btn-primary w-full"
           aria-label="ثبت ایمیل برای خبرنامه"
         >
           {isLoading ? "درحال ارسال..." : "ثبت"}

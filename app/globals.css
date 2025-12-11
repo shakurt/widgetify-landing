@@ -34,3 +34,14 @@ body {
     -apple-system,
     sans-serif;
 }
+
+.btn-base {
+  @apply cursor-pointer px-3 py-2 text-sm font-medium text-white transition-colors duration-300 disabled:opacity-50;
+}
+.btn-primary {
+  @apply rounded-lg bg-blue-600 hover:bg-blue-700;
+}
+
+.btn-outline {
+  @apply rounded-2xl border border-gray-400 text-gray-600 hover:border-blue-400 hover:bg-gray-50 hover:shadow-sm;
+}

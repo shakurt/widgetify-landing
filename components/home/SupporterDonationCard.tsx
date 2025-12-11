@@ -101,21 +101,25 @@ const SupportDonationCard: React.FC<SupportDonationCardProps> = ({
     "bg-neutral-700",
     "bg-neutral-600",
   ];
-  const cardClassName = ` group relative flex flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white/75 p-3 shadow-[0_8px_24px_-16px_rgba(0,0,0,0.5)] backdrop-blur-sm transition-transform duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_-18px_rgba(0,0,0,0.4)]`;
+  const cardClassName = `group relative flex animate-scale-in flex-col overflow-hidden rounded-xl border border-neutral-200 bg-white/75 p-3 shadow-[0_8px_24px_-16px_rgba(0,0,0,0.5)] backdrop-blur-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-[0_12px_30px_-18px_rgba(0,0,0,0.4)] sm:p-4`;
 
   const badge = getDonationBadge(amount);
   const accent = accentBands[index % accentBands.length];
 
   return (
-    <article className={cardClassName}>
+    <article
+      className={cardClassName}
+      aria-label={`حمایت ${name || "ناشناس"} به مبلغ ${formatAmount(amount)} ${getCurrencySymbol(currency)}`}
+    >
       <div className="flex items-start justify-between gap-2">
-        <div className="flex items-center gap-2">
+        <div className="flex items-center gap-2 sm:gap-2.5">
           {avatar ? (
-            <span className="relative inline-flex h-8 w-8 overflow-hidden rounded-lg border border-neutral-200 shadow-sm">
+            <span className="relative inline-flex h-9 w-9 overflow-hidden rounded-lg border border-neutral-200 shadow-sm sm:h-10 sm:w-10">
               <img
                 src={avatar}
                 alt={name ? `آواتار ${name}` : "آواتار حامی"}
                 className="h-full w-full object-cover"
+                loading="lazy"
                 // onError={(event) => {
                 //   (event.target as HTMLImageElement).style.display = "none";
                 // }}
@@ -123,43 +127,73 @@ const SupportDonationCard: React.FC<SupportDonationCardProps> = ({
             </span>
           ) : (
             <span
-              className={`inline-flex h-8 w-8 items-center justify-center rounded-lg text-sm font-semibold tracking-tight text-white ${accent}`}
+              className={`inline-flex h-9 w-9 items-center justify-center rounded-lg text-sm font-semibold tracking-tight text-white sm:h-10 sm:w-10 ${accent}`}
+              aria-label={`حروف اول نام ${name || "حامی"}`}
             >
               {getInitials(name)}
             </span>
           )}
           <div className="flex flex-col">
-            <span className="text-sm font-semibold text-neutral-900">
+            <span className="text-sm leading-tight font-semibold text-neutral-900 sm:text-base">
               {name || "حامی ناشناس"}
             </span>
-            <span className="text-xs text-neutral-500">{formatDate(time)}</span>
+            <time
+              className="text-xs text-neutral-500 sm:text-sm"
+              dateTime={new Date(time * 1000).toISOString()}
+            >
+              {formatDate(time)}
+            </time>
           </div>
         </div>
         {badge && (
           <span
-            className={`inline-flex items-center gap-1 rounded-full px-2.5 py-1 text-xs font-semibold ${badge.className}`}
+            className={`inline-flex items-center gap-1 rounded-full px-2 py-0.5 text-xs font-semibold sm:px-2.5 sm:py-1 ${badge.className}`}
             dir="auto"
+            role="status"
+            aria-label={`سطح حمایت: ${badge.label}`}
           >
-            <span className="text-base leading-none">{badge.emoji}</span>
-            {badge.label}
+            <span
+              className="text-sm leading-none sm:text-base"
+              aria-hidden="true"
+            >
+              {badge.emoji}
+            </span>
+            <span className="hidden sm:inline">{badge.label}</span>
           </span>
         )}
       </div>
 
-      <div className="mt-2">
-        <p className="text-xs font-medium text-neutral-500">مبلغ حمایت</p>
-        <div className="mt-1 flex items-baseline gap-1 text-neutral-900">
-          <span className="text-2xl font-semibold">{formatAmount(amount)}</span>
-          <span className="text-xs font-medium text-neutral-500" dir="auto">
+      <div className="mt-2 sm:mt-3">
+        <p
+          className="text-xs font-medium text-neutral-500 sm:text-sm"
+          id={`amount-label-${index}`}
+        >
+          مبلغ حمایت
+        </p>
+        <div
+          className="mt-1 flex items-baseline gap-1 text-neutral-900"
+          aria-labelledby={`amount-label-${index}`}
+        >
+          <span className="text-xl font-semibold sm:text-2xl">
+            {formatAmount(amount)}
+          </span>
+          <span
+            className="text-xs font-medium text-neutral-500 sm:text-sm"
+            dir="auto"
+          >
             {getCurrencySymbol(currency)}
           </span>
         </div>
       </div>
 
-      <div className="mt-2 max-h-20 min-h-20 overflow-y-auto rounded-2xl bg-neutral-100 p-1.5 font-light">
+      <div
+        className="mt-2 max-h-20 min-h-20 overflow-y-auto rounded-xl bg-neutral-100 p-2 font-light sm:mt-3 sm:rounded-2xl"
+        role="region"
+        aria-label="پیام حمایت"
+      >
         {description ? (
           <p
-            className="[display:-webkit-box] overflow-hidden text-xs leading-tight text-neutral-600"
+            className="[display:-webkit-box] overflow-hidden text-xs leading-tight text-neutral-600 sm:text-sm"
             style={{
               WebkitLineClamp: 5,
               WebkitBoxOrient: "vertical",
@@ -168,15 +202,20 @@ const SupportDonationCard: React.FC<SupportDonationCardProps> = ({
             {description}
           </p>
         ) : (
-          <p className="text-sm text-neutral-400">
+          <p className="text-xs text-neutral-400 italic sm:text-sm">
             این حامی پیامی ثبت نکرده است.
           </p>
         )}
       </div>
 
-      <div className="mt-2 h-px w-full bg-neutral-200/70"></div>
-      <footer className="mt-1 text-xs font-bold text-gray-500">
-        سپاس از همراهی شما با ویجتیفای 💙
+      <div
+        className="mt-2 h-px w-full bg-neutral-200/70 sm:mt-3"
+        role="separator"
+      ></div>
+      <footer className="mt-1.5 text-xs font-bold text-gray-500 sm:mt-2 sm:text-sm">
+        <span aria-label="سپاس از همراهی شما با ویجتیفای">
+          سپاس از همراهی شما با ویجتیفای 💙
+        </span>
       </footer>
     </article>
   );

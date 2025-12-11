@@ -27,9 +27,10 @@ export const getContributors = cache(async () => {
           response.status === 403 &&
           response.headers.get("X-RateLimit-Remaining") === "0"
         ) {
-          throw new Error("Rate limit exceeded");
+          // throw new Error("Rate limit exceeded");
         }
-        throw new Error(json.message || "خطایی رخ داد");
+        // TODO:
+        // throw new Error(json.message || "خطایی رخ داد");
       }
       return json;
     })

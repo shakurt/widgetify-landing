@@ -47,7 +47,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="cursor-pointer rounded-lg bg-white text-gray-600 transition-colors duration-200 hover:bg-gray-100"
+              className="cursor-pointer rounded-lg bg-white p-0.5 text-gray-600 transition-colors duration-200 hover:bg-gray-100"
               aria-label="Close Sidebar"
             >
               <LuX size={24} />

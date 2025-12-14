@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { GITHUB_LINK } from "@/constants";
+import { GITHUB_LINK } from "@/lib/constants";
 
 import { isLanguageFa } from "../_lib/utils";
 

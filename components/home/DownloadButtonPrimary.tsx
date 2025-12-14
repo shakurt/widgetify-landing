@@ -1,6 +1,6 @@
 import { FaChrome } from "react-icons/fa6";
 
-import { CHROME_EXTENSION_URL } from "@/constants";
+import { CHROME_EXTENSION_URL } from "@/lib/constants";
 
 const DownloadButtonChrome = () => {
   return (

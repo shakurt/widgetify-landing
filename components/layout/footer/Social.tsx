@@ -12,7 +12,7 @@ import {
   INSTAGRAM_LINK,
   TELEGRAM_LINK,
   X_LINK,
-} from "@/constants";
+} from "@/lib/constants";
 
 import SocialLink from "./SocialLink";
 

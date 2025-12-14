@@ -1,4 +1,4 @@
-import { DESKTOP_LINK, PWA_LINK, CHROME_EXTENSION_URL } from "@/constants";
+import { DESKTOP_LINK, PWA_LINK, CHROME_EXTENSION_URL } from "@/lib/constants";
 
 import FooterLink from "./FooterLink";
 

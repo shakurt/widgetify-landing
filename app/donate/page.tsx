@@ -4,7 +4,7 @@ import { LuSparkles, LuExternalLink } from "react-icons/lu";
 
 import AnimateOnScroll from "@/components/animations/AnimateOnScroll";
 import SupportersDonation from "@/components/home/SupportersDonation";
-import { DONATE_LINK } from "@/constants";
+import { DONATE_LINK } from "@/lib/constants";
 
 export const metadata = {
   title: "حمایت از ویجتیفای | Support Widgetify",

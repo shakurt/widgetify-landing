@@ -3,8 +3,8 @@ import Link from "next/link";
 
 import { FaGithub } from "react-icons/fa6";
 
-import { getContributors } from "@/app/lib/data";
-import { GITHUB_LINK } from "@/constants";
+import { GITHUB_LINK } from "@/lib/constants";
+import { getContributors } from "@/lib/data";
 
 import "@/app/styles/contributors.css";
 

@@ -1,6 +1,6 @@
 import { LuMail } from "react-icons/lu";
 
-import { MAILTO_PRIVACY } from "@/constants";
+import { MAILTO_PRIVACY } from "@/lib/constants";
 
 import SectionWrapper from "./layout/SectionWrapper";
 import { isLanguageFa } from "../_lib/utils";

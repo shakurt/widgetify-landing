@@ -1,7 +1,7 @@
 import { FaChrome, FaEdge, FaFirefox, FaOpera, FaBrave } from "react-icons/fa6";
 
 import DownloadButtonPrimary from "@/components/home/DownloadButtonPrimary";
-import { CHROME_EXTENSION_URL } from "@/constants";
+import { CHROME_EXTENSION_URL } from "@/lib/constants";
 
 import DownloadButtonSecondary from "./DownloadButtonSecondary";
 

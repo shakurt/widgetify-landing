@@ -4,7 +4,7 @@ import Link from "next/link";
 
 import { LuArrowLeft, LuHouse, LuSearch } from "react-icons/lu";
 
-import { GITHUB_LINK } from "@/constants";
+import { GITHUB_LINK } from "@/lib/constants";
 // import { useDocumentTitle } from "../hooks";
 
 const NotFound = () => {

@@ -55,8 +55,8 @@ const DownloadButtons = () => {
         className="mt-3 max-w-xl text-center text-xs leading-relaxed text-gray-500 md:text-sm"
         aria-label="راهنمای نصب"
       >
-        نصب خیلی راحته! فقط کافیه روی مرورگر مورد نظرت کلیک کنی و دکمه "Add to
-        Chrome" رو بزنی
+        <strong className="font-medium">نصب خیلی راحته!</strong> فقط کافیه روی
+        مرورگر مورد نظرت کلیک کنی و دکمه "Add to Chrome" رو بزنی
       </p>
     </section>
   );

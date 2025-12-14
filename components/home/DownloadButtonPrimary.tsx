@@ -13,8 +13,7 @@ const DownloadButtonChrome = () => {
       title="دانلود افزونه ویجتیفای برای گوگل کروم"
     >
       <FaChrome
-        size={30}
-        className="ml-2 transition-transform group-hover:scale-110 md:ml-3 md:size-12 lg:ml-4 lg:size-15"
+        className="ml-2 size-6 transition-transform group-hover:scale-110 md:ml-3 md:size-8 lg:ml-4 lg:size-10"
         aria-hidden="true"
       />
       <span className="text-lg md:text-xl lg:text-2xl">

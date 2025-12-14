@@ -1,3 +1,5 @@
+"use client";
+
 import { useRef } from "react";
 
 import { LuX } from "react-icons/lu";
@@ -34,13 +36,19 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
 
       <aside
         ref={sidebarRef}
+        aria-label="منوی کناری"
         className={`fixed top-0 right-0 z-50 h-full w-72 bg-white shadow-2xl transition-transform duration-300 md:hidden ${
           isOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
         <div className="flex h-full flex-col">
           <header className="flex items-center justify-between border-b border-gray-200 p-4">
-            <button type="button" onClick={onClose} className="cursor-pointer">
+            <button
+              type="button"
+              onClick={onClose}
+              className="cursor-pointer"
+              aria-label="بستن منو و بازگشت به صفحه اصلی"
+            >
               <FullLogo />
             </button>
 
@@ -48,9 +56,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
               type="button"
               onClick={onClose}
               className="cursor-pointer rounded-lg bg-white p-0.5 text-gray-600 transition-colors duration-200 hover:bg-gray-100"
-              aria-label="Close Sidebar"
+              aria-label="بستن منوی کناری"
             >
-              <LuX size={24} />
+              <LuX size={24} aria-hidden="true" />
             </button>
           </header>
 

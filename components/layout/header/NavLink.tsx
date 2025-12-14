@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -25,13 +27,15 @@ const NavLink: React.FC<NavLinkProps> = ({
       target={isExternal ? "_blank" : undefined}
       rel={isExternal ? "noopener noreferrer" : undefined}
       onClick={onClick}
+      aria-label={isExternal ? `${label} - باز شدن در تب جدید` : label}
+      aria-current={isActive ? "page" : undefined}
       className={`flex items-center rounded-md px-3 py-2 transition-colors duration-150 ${
         isActive
           ? "bg-blue-50 font-medium text-blue-600"
           : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
       }`}
     >
-      <Icon className="ml-1.5 size-[18px]" />
+      <Icon className="ml-1.5 size-4.5" aria-hidden="true" />
       {label}
     </Link>
   );

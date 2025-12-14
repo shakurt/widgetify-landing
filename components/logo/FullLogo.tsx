@@ -13,21 +13,22 @@ const FullLogo: React.FC<FullLogoProps> = ({ classname }) => {
   const mergedClassName = twMerge(`object-contain`, classname);
 
   return (
-    <Link href="/" className="flex items-center">
+    <Link
+      href="/"
+      className="flex items-center"
+      aria-label="ویجتی‌فای - صفحه اصلی"
+    >
       <Image
         src={LogoImage}
-        alt="ویجتی‌فای"
+        alt="لوگوی ویجتی‌فای"
         width={32}
         height={32}
         className={mergedClassName}
-        // TODO: handle image error
-        // onError={(e) => {
-        //   e.currentTarget.src = "https://placehold.co/96x96?text=W";
-        // }}
+        priority
       />
-
-      {/* TODO: the header is rendering client-side and we need to put h111 tag actually on page content and remove h1 tag here */}
-      <h1 className="mr-2 text-xl font-bold text-blue-600">ویجتی‌فای</h1>
+      <span className="mr-2 text-base font-bold text-blue-600 md:text-xl">
+        ویجتی‌فای
+      </span>
     </Link>
   );
 };

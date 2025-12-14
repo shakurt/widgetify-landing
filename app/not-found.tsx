@@ -67,7 +67,7 @@ const NotFound = () => {
             >
               <h4 className="font-medium">اکستنشن مرورگر</h4>
               <p className="text-sm text-gray-500">
-                افزونه ویجتی‌فای برای مرورگرها
+                افزونه ویجتیفای برای مرورگرها
               </p>
             </Link>
 
@@ -76,7 +76,7 @@ const NotFound = () => {
               className="rounded-lg border border-gray-200 bg-white p-4 hover:border-blue-200 hover:shadow-sm"
             >
               <h4 className="font-medium">حمایت مالی</h4>
-              <p className="text-sm text-gray-500">کمک به توسعه ویجتی‌فای</p>
+              <p className="text-sm text-gray-500">کمک به توسعه ویجتیفای</p>
             </Link>
 
             <a

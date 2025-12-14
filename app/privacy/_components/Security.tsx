@@ -16,7 +16,7 @@ const Security: React.FC<SecurityProps> = ({ lang }) => {
     >
       <p className="leading-relaxed">
         {isLanguageFa(lang)
-          ? "ویجتی‌فای یک پروژه متن‌باز است و کد آن برای بررسی عمومی در دسترس است. این شفافیت به کاربران امکان می‌دهد از امنیت افزونه اطمینان حاصل کنند."
+          ? "ویجتیفای یک پروژه متن‌باز است و کد آن برای بررسی عمومی در دسترس است. این شفافیت به کاربران امکان می‌دهد از امنیت افزونه اطمینان حاصل کنند."
           : "Widgetify is an open-source project, and its code is available for public review. This transparency allows users to verify the extension's security."}
       </p>
     </SectionWrapper>

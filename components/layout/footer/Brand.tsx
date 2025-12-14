@@ -10,10 +10,10 @@ const Brand = () => {
         className="mb-3 text-center font-light text-gray-600"
         itemProp="description"
       >
-        محیط خسته کننده خودتون رو با ویجتی‌فای به یک محیط جذاب و کاربرپسند تبدیل
+        محیط خسته کننده خودتون رو با ویجتیفای به یک محیط جذاب و کاربرپسند تبدیل
         کنید.
       </p>
-      <meta itemProp="name" content="ویجتی‌فای" />
+      <meta itemProp="name" content="ویجتیفای" />
       <meta itemProp="url" content="https://widgetify.ir" />
     </div>
   );

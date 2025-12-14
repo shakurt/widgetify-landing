@@ -19,7 +19,7 @@ const ExtensionPermissions: React.FC<ExtensionPermissionsProps> = ({
       {isLanguageFa(lang) ? (
         <>
           <p className="leading-relaxed">
-            افزونه ویجتی‌فای فقط به دسترسی‌های ضروری برای عملکرد اصلی خود نیاز
+            افزونه ویجتیفای فقط به دسترسی‌های ضروری برای عملکرد اصلی خود نیاز
             دارد:
           </p>
           <ul

@@ -20,8 +20,8 @@ const OpenSourceNote: React.FC<OpenSourceNote> = ({ lang }) => {
       <p className="leading-relaxed">
         {isLanguageFa(lang) ? (
           <>
-            <strong>توجه:</strong> ویجتی‌فای یک پروژه متن‌باز است و کد آن به
-            صورت عمومی در
+            <strong>توجه:</strong> ویجتیفای یک پروژه متن‌باز است و کد آن به صورت
+            عمومی در
             <Link
               href={GITHUB_LINK}
               className="mx-1 text-blue-600 underline-offset-2 hover:underline"

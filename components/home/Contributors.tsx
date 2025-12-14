@@ -29,7 +29,7 @@ const ContributorsSection = async () => {
       <div className="mb-8 flex flex-col items-center border-b border-gray-200 pb-6">
         <h2 className="mb-2 text-center text-3xl font-bold">مشارکت‌کنندگان</h2>
         <p className="text-gray-500">
-          شما هم میتونید به بهبود ویجتی‌فای کمک کنید
+          شما هم میتونید به بهبود ویجتیفای کمک کنید
         </p>
       </div>
 

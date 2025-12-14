@@ -18,7 +18,7 @@ const DataProtection: React.FC<DataProtectionProps> = ({ lang }) => {
       {isLanguageFa(lang) ? (
         <>
           <p className="leading-relaxed">
-            ویجتی‌فای از مکانیزم‌های قوی برای حفاظت از داده‌های حساس کاربران
+            ویجتیفای از مکانیزم‌های قوی برای حفاظت از داده‌های حساس کاربران
             استفاده می‌کند:
           </p>
           <h3 className="mb-1.5 text-base font-semibold sm:mb-2 sm:text-lg">

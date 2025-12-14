@@ -9,8 +9,7 @@ const Supporters = () => {
         حمایت کنندگان 💙
       </h2>
       <p className="mx-auto mb-4 max-w-2xl text-center text-lg text-gray-600">
-        از تمامی حامیان و کاربرانی که به توسعه ویجتی‌فای کمک کرده‌اند،
-        سپاسگزاریم
+        از تمامی حامیان و کاربرانی که به توسعه ویجتیفای کمک کرده‌اند، سپاسگزاریم
       </p>
 
       <SupporterDonations count={12} />

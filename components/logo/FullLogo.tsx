@@ -16,18 +16,18 @@ const FullLogo: React.FC<FullLogoProps> = ({ classname }) => {
     <Link
       href="/"
       className="flex items-center"
-      aria-label="ویجتی‌فای - صفحه اصلی"
+      aria-label="ویجتیفای - صفحه اصلی"
     >
       <Image
         src={LogoImage}
-        alt="لوگوی ویجتی‌فای"
+        alt="لوگوی ویجتیفای"
         width={32}
         height={32}
         className={mergedClassName}
         priority
       />
       <span className="mr-2 text-base font-bold text-blue-600 md:text-xl">
-        ویجتی‌فای
+        ویجتیفای
       </span>
     </Link>
   );

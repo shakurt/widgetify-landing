@@ -17,7 +17,7 @@ const DataSharing: React.FC<DataSharingProps> = ({ lang }) => {
     >
       <p className="leading-relaxed">
         {isLanguageFa(lang)
-          ? "ویجتی‌فای هیچ داده کاربری را با اشخاص ثالث به اشتراک نمی‌گذارد."
+          ? "ویجتیفای هیچ داده کاربری را با اشخاص ثالث به اشتراک نمی‌گذارد."
           : "Widgetify does not share any user data with third parties."}
       </p>
     </SectionWrapper>

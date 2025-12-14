@@ -22,7 +22,7 @@ const Header: React.FC<HeaderProps> = ({ lang }) => {
             />
             <h1 className="text-xl font-bold sm:text-2xl md:text-3xl">
               {isLanguageFa(lang)
-                ? "سیاست حفظ حریم خصوصی ویجتی‌فای"
+                ? "سیاست حفظ حریم خصوصی ویجتیفای"
                 : "Widgetify Privacy Policy"}
             </h1>
           </div>

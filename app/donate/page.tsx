@@ -7,9 +7,9 @@ import SupportersDonation from "@/components/home/SupportersDonation";
 import { DONATE_LINK } from "@/constants";
 
 export const metadata = {
-  title: "حمایت از ویجتی‌فای | Support Widgetify",
+  title: "حمایت از ویجتیفای | Support Widgetify",
   description:
-    "با حمایت مالی از ویجتی‌فای، به ما کمک کنید تا خدمات بهتری ارائه دهیم. Support Widgetify to help us provide better services.",
+    "با حمایت مالی از ویجتیفای، به ما کمک کنید تا خدمات بهتری ارائه دهیم. Support Widgetify to help us provide better services.",
 };
 
 const DonationPage = () => {
@@ -34,11 +34,11 @@ const DonationPage = () => {
           />
         </div>
         <h1 className="animate-slide-down mb-4 block bg-linear-to-r from-blue-600 via-purple-600 to-pink-600 bg-clip-text text-3xl font-bold text-blue-600 [-webkit-text-fill-color:transparent] supports-[background-clip:text]:text-transparent sm:mb-6 sm:text-4xl md:text-5xl lg:text-6xl">
-          حمایت از ویجتی‌فای
+          حمایت از ویجتیفای
         </h1>
 
         <p className="animate-slide-up mx-auto mb-6 max-w-3xl px-4 text-base leading-relaxed font-light text-gray-700 sm:mb-8 sm:text-lg md:text-xl lg:text-2xl">
-          با حمایت مالی از ویجتی‌فای، به ما کمک کنید تا خدمات بهتری ارائه دهیم.
+          با حمایت مالی از ویجتیفای، به ما کمک کنید تا خدمات بهتری ارائه دهیم.
           تمامی مبالغ دریافتی صرف توسعه و نگهداری پروژه خواهد شد.
         </p>
 
@@ -47,7 +47,7 @@ const DonationPage = () => {
           target="_blank"
           rel="noopener noreferrer"
           className="animate-scale-in inline-flex items-center gap-1.5 rounded-xl bg-linear-to-r from-blue-600 to-purple-600 px-6 py-3 text-base font-medium text-white shadow-lg transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-purple-700 hover:shadow-xl focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 focus:outline-none sm:gap-2 sm:rounded-2xl sm:px-8 sm:py-4 sm:text-lg"
-          aria-label="حمایت مالی از ویجتی‌فای - Support Widgetify financially"
+          aria-label="حمایت مالی از ویجتیفای - Support Widgetify financially"
         >
           <span>🎁 حمایت کنید</span>
           <LuExternalLink
@@ -71,7 +71,7 @@ const DonationPage = () => {
               آخرین حمایت‌ها
             </h2>
             <p className="mx-auto max-w-2xl px-4 text-sm leading-relaxed font-light text-gray-700 sm:text-base">
-              حمایت‌های شما به ما انگیزه می‌دهد تا ویجتی‌فای را روز به روز بهتر
+              حمایت‌های شما به ما انگیزه می‌دهد تا ویجتیفای را روز به روز بهتر
               کنیم. با تشکر از اعتماد شما.
             </p>
           </div>
@@ -96,18 +96,17 @@ const DonationPage = () => {
               id="final-cta-heading"
               className="mb-4 text-2xl leading-tight font-bold sm:mb-6 sm:text-3xl md:text-4xl"
             >
-              همین الان از ویجتی‌فای حمایت کنید
+              همین الان از ویجتیفای حمایت کنید
             </h2>
             <p className="mx-auto mb-6 max-w-2xl px-4 text-base leading-relaxed text-blue-100 sm:mb-8 sm:text-lg md:text-xl">
-              با حمایت شما، ویجتی‌فای قدرتمندتر می‌شود و خدمات بهتری ارائه
-              می‌دهد
+              با حمایت شما، ویجتیفای قدرتمندتر می‌شود و خدمات بهتری ارائه می‌دهد
             </p>
             <Link
               href={DONATE_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-1.5 rounded-xl bg-white px-6 py-3 text-base font-semibold text-blue-600 shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-50 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600 focus:outline-none sm:gap-2 sm:rounded-2xl sm:px-8 sm:py-4 sm:text-lg"
-              aria-label="حمایت مالی از ویجتی‌فای - دومین دکمه"
+              aria-label="حمایت مالی از ویجتیفای - دومین دکمه"
             >
               <span>💙 حمایت مالی</span>
               <LuExternalLink

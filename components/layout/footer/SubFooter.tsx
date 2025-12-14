@@ -15,7 +15,7 @@ const SubFooter = () => {
 
         <div className="text-center md:text-right">
           <p className="text-sm text-gray-500">
-            &copy; {new Date().getFullYear()} ویجتی‌فای. تمامی حقوق محفوظ است.
+            &copy; {new Date().getFullYear()} ویجتیفای. تمامی حقوق محفوظ است.
           </p>
           <p className="mt-1 text-xs text-gray-400">ساخته شده با ❤️ در ایران</p>
         </div>

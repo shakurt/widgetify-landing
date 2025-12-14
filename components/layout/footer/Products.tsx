@@ -12,7 +12,7 @@ const Products = () => {
       <h3 id="products-heading" className="mb-2 text-lg font-bold">
         محصولات
       </h3>
-      <meta itemProp="name" content="محصولات ویجتی‌فای" />
+      <meta itemProp="name" content="محصولات ویجتیفای" />
       <ul className="space-y-2" role="list">
         <li>
           <FooterLink href={CHROME_EXTENSION_URL} target="_blank">

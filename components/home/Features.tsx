@@ -9,19 +9,29 @@ import FeatureCard from "./FeatureCard";
 
 const Features = () => {
   return (
-    <section className="my-10 flex flex-col gap-6">
-      <h2 className="mb-2 text-center text-3xl font-bold text-gray-900 md:text-4xl">
-        ویژگی‌های افزونه ویجتیفای 🎯
-      </h2>
+    <section
+      id="features"
+      className="my-8 flex flex-col gap-4 px-4 md:my-12 md:gap-6 md:px-6 lg:my-16 lg:px-8"
+      aria-labelledby="features-heading"
+    >
+      <div className="mb-2 text-center md:mb-4">
+        <h2
+          id="features-heading"
+          className="mb-3 text-2xl leading-tight font-bold tracking-tight text-gray-900 md:mb-4 md:text-3xl lg:text-4xl"
+        >
+          ویژگی‌های افزونه ویجتیفای 🎯
+        </h2>
 
-      <p className="mx-auto max-w-2xl text-center text-lg text-gray-600">
-        این بهترین افزونه نیو تب با ویجت‌های کاربردی زندگی دیجیتالت رو راحت‌تر
-        می‌کنه. افزونه مرورگر ویجتیفای همه چیزی که نیاز داری رو داره!
-      </p>
+        <p className="animate-fade-in-up mx-auto max-w-3xl text-center text-sm leading-relaxed font-light text-gray-600 md:text-base md:leading-relaxed lg:text-lg">
+          این بهترین افزونه نیو تب با ویجت‌های کاربردی زندگی دیجیتالت رو راحت‌تر
+          می‌کنه. افزونه مرورگر ویجتیفای همه چیزی که نیاز داری رو داره!
+        </p>
+      </div>
 
-      <section
-        aria-label="Feature Cards Container"
-        className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3"
+      <div
+        role="list"
+        aria-label="لیست ویژگی‌های افزونه ویجتیفای"
+        className="grid grid-cols-1 gap-4 md:grid-cols-2 md:gap-6 lg:grid-cols-3 lg:gap-8"
       >
         <FeatureCard
           title="💰 مدیریت مالی هوشمند"
@@ -59,7 +69,7 @@ const Features = () => {
           image={WeatherWidgetImage.src}
           alt="ویجت آب و هوا افزونه مرورگر ویجتیفای"
         />
-      </section>
+      </div>
     </section>
   );
 };

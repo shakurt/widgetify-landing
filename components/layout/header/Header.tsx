@@ -2,13 +2,12 @@
 
 import { useState } from "react";
 
+import { LuMenu } from "react-icons/lu";
 import { useMountedState, useWindowScroll } from "react-use";
 
 import NavLinkList from "@/components/layout/header/NavLinkList";
 import Sidebar from "@/components/layout/header/Sidebar";
 import FullLogo from "@/components/logo/FullLogo";
-
-import SidebarButton from "./SidebarButton";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -33,7 +32,14 @@ const Header = () => {
           <NavLinkList />
         </div>
 
-        <SidebarButton setIsMenuOpen={setIsMenuOpen} />
+        <button
+          type="button"
+          aria-label="Open Navbar Menu"
+          onClick={() => setIsMenuOpen(true)}
+          className="cursor-pointer rounded-lg bg-white p-0.5 text-gray-600 transition-colors duration-200 hover:bg-gray-100 md:hidden"
+        >
+          <LuMenu size={24} />
+        </button>
       </div>
 
       <Sidebar isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />

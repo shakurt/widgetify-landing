@@ -2,11 +2,11 @@ import Link from "next/link";
 
 import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
-import { isLanguageFa } from "../_lib/utils";
+import { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
-import type { Language } from "../_lib/types";
 type BackButtonProps = {
-  lang: Language;
+  lang: PrivacyLanguage;
 };
 
 const BackButton: React.FC<BackButtonProps> = ({ lang }) => {

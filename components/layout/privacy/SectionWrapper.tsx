@@ -1,12 +1,11 @@
-import { isLanguageFa } from "../../_lib/utils";
-
-import type { Language } from "../../_lib/types";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
 type SectionWrapperProps = {
   titleEn: string;
   titleFa: string;
   children: React.ReactNode;
-  lang: Language;
+  lang: PrivacyLanguage;
   ariaLabel: string;
 };
 

@@ -1,28 +1,28 @@
-import BackButton from "./_components/BackButton";
-import ChangePrivacy from "./_components/ChangePrivacy";
-import CollectedInformation from "./_components/CollectedInformation";
+import Header from "@/components/layout/privacy/Header";
+import BackButton from "@/components/privacy/BackButton";
+import ChangePrivacy from "@/components/privacy/ChangePrivacy";
+import CollectedInformation from "@/components/privacy/CollectedInformation";
+import ContactUs from "@/components/privacy/ContactUs";
+import DataDeletion from "@/components/privacy/DataDeletion";
+import DataProtection from "@/components/privacy/DataProtection";
+import DataSharing from "@/components/privacy/DataSharing";
+import DataUsage from "@/components/privacy/DataUsage";
+import ExtensionPermissions from "@/components/privacy/ExtensionPermissions";
+import GoogleIntegration from "@/components/privacy/GoogleIntegration";
+import Introduction from "@/components/privacy/Introduction";
+import OpenSourceNote from "@/components/privacy/OpenSourceNote";
+import Retention from "@/components/privacy/Retention";
+import Security from "@/components/privacy/Security";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
+
 export const metadata = {
   title: "Privacy Policy | Widgetify",
   description: "Widgetify privacy policy and data protection information",
 };
-import ContactUs from "./_components/ContactUs";
-import DataDeletion from "./_components/DataDeletion";
-import DataProtection from "./_components/DataProtection";
-import DataSharing from "./_components/DataSharing";
-import DataUsage from "./_components/DataUsage";
-import ExtensionPermissions from "./_components/ExtensionPermissions";
-import GoogleIntegration from "./_components/GoogleIntegration";
-import Introduction from "./_components/Introduction";
-import Header from "./_components/layout/Header";
-import OpenSourceNote from "./_components/OpenSourceNote";
-import Retention from "./_components/Retention";
-import Security from "./_components/Security";
-import { isLanguageFa } from "./_lib/utils";
-
-import type { Language } from "./_lib/types";
 
 type PrivacyPageProps = {
-  searchParams: Promise<{ lang?: Language }>;
+  searchParams: Promise<{ lang?: PrivacyLanguage }>;
 };
 
 const PrivacyPage: React.FC<PrivacyPageProps> = async ({ searchParams }) => {

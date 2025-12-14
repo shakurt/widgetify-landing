@@ -2,11 +2,11 @@ import Link from "next/link";
 
 import { LuGlobe, LuShield } from "react-icons/lu";
 
-import { isLanguageFa } from "../../_lib/utils";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
-import type { Language } from "../../_lib/types";
 type HeaderProps = {
-  lang: Language;
+  lang: PrivacyLanguage;
 };
 
 const Header: React.FC<HeaderProps> = ({ lang }) => {

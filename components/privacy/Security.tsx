@@ -1,9 +1,9 @@
-import SectionWrapper from "./layout/SectionWrapper";
-import { isLanguageFa } from "../_lib/utils";
+import SectionWrapper from "@/components/layout/privacy/SectionWrapper";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
-import type { Language } from "../_lib/types";
 type SecurityProps = {
-  lang: Language;
+  lang: PrivacyLanguage;
 };
 
 const Security: React.FC<SecurityProps> = ({ lang }) => {

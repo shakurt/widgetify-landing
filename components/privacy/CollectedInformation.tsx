@@ -1,10 +1,9 @@
-import SectionWrapper from "./layout/SectionWrapper";
-import { isLanguageFa } from "../_lib/utils";
-
-import type { Language } from "../_lib/types";
+import SectionWrapper from "@/components/layout/privacy/SectionWrapper";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
 type CollectedInformationProps = {
-  lang: Language;
+  lang: PrivacyLanguage;
 };
 const CollectedInformation: React.FC<CollectedInformationProps> = ({
   lang,

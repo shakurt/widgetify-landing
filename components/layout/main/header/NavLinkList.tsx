@@ -7,7 +7,7 @@ import {
   LuHouse,
 } from "react-icons/lu";
 
-import NavLink from "@/components/layout/header/NavLink";
+import NavLink from "@/components/layout/main/header/NavLink";
 
 type NavLinkListProps = {
   onClose?: () => void;

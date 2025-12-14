@@ -1,13 +1,11 @@
 import Link from "next/link";
 
 import { GITHUB_LINK } from "@/lib/constants";
-
-import { isLanguageFa } from "../_lib/utils";
-
-import type { Language } from "../_lib/types";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
 type OpenSourceNote = {
-  lang: Language;
+  lang: PrivacyLanguage;
 };
 
 const OpenSourceNote: React.FC<OpenSourceNote> = ({ lang }) => {

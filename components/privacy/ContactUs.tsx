@@ -1,14 +1,12 @@
 import { LuMail } from "react-icons/lu";
 
+import SectionWrapper from "@/components/layout/privacy/SectionWrapper";
 import { MAILTO_PRIVACY } from "@/lib/constants";
-
-import SectionWrapper from "./layout/SectionWrapper";
-import { isLanguageFa } from "../_lib/utils";
-
-import type { Language } from "../_lib/types";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
 type ContactUsProps = {
-  lang: Language;
+  lang: PrivacyLanguage;
 };
 
 const ContactUs: React.FC<ContactUsProps> = ({ lang }) => {

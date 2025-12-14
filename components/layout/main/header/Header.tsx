@@ -5,8 +5,8 @@ import { useState } from "react";
 import { LuMenu } from "react-icons/lu";
 import { useMountedState, useWindowScroll } from "react-use";
 
-import NavLinkList from "@/components/layout/header/NavLinkList";
-import Sidebar from "@/components/layout/header/Sidebar";
+import NavLinkList from "@/components/layout/main/header/NavLinkList";
+import Sidebar from "@/components/layout/main/header/Sidebar";
 import FullLogo from "@/components/logo/FullLogo";
 
 const Header = () => {

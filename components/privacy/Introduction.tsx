@@ -1,8 +1,8 @@
-import { isLanguageFa } from "../_lib/utils";
+import type { PrivacyLanguage } from "@/lib/types";
+import { isLanguageFa } from "@/lib/utils";
 
-import type { Language } from "../_lib/types";
 type IntroductionProps = {
-  lang: Language;
+  lang: PrivacyLanguage;
 };
 
 const Introduction: React.FC<IntroductionProps> = ({ lang }) => {

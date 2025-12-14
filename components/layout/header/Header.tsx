@@ -36,6 +36,7 @@ const Header = () => {
           type="button"
           aria-label="باز کردن منوی ناوبری"
           onClick={() => setIsMenuOpen(true)}
+          disabled={isMenuOpen}
           className="cursor-pointer rounded-lg bg-white p-0.5 text-gray-600 transition-colors duration-200 hover:bg-gray-100 md:hidden"
         >
           <LuMenu size={24} aria-hidden="true" />

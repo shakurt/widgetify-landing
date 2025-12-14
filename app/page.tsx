@@ -15,10 +15,7 @@ const Home = () => {
 
   return (
     <header className="min-h-screen bg-linear-to-br from-blue-50 via-white to-purple-50">
-      <section
-        className="relative px-4 py-20"
-        aria-label="معرفی افزونه ویجتیفای"
-      >
+      <section className="px-4 py-20" aria-label="معرفی افزونه ویجتیفای">
         <div className="container flex flex-col gap-6">
           <Hero />
           <ImageSlider />

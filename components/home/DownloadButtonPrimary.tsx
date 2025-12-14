@@ -1,28 +1,30 @@
-import Link from "next/link";
-
 import { FaChrome } from "react-icons/fa6";
 
 import { CHROME_EXTENSION_URL } from "@/constants";
 
 const DownloadButtonChrome = () => {
   return (
-    <Link
+    <a
       href={CHROME_EXTENSION_URL}
       target="_blank"
       rel="noopener noreferrer"
-      className="group focus:ring-opacity-50 relative flex transform items-center rounded-2xl bg-linear-to-r from-blue-600 to-blue-700 px-12 py-5 text-xl font-bold text-white transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-blue-800 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 focus:outline-none"
+      className="group focus:ring-opacity-50 relative flex transform items-center rounded-2xl bg-linear-to-r from-blue-600 to-blue-700 px-6 py-3 text-lg font-bold text-white transition-all duration-300 hover:scale-105 hover:from-blue-700 hover:to-blue-800 hover:shadow-2xl focus:ring-4 focus:ring-blue-300 focus:outline-none md:px-8 md:py-4 md:text-xl lg:px-12 lg:py-5"
       aria-label="دانلود افزونه ویجتیفای برای گوگل کروم - بهترین افزونه نیو تب"
+      title="دانلود افزونه ویجتیفای برای گوگل کروم"
     >
       <FaChrome
-        size={32}
-        className="ml-4 transition-transform group-hover:scale-110"
+        size={30}
+        className="ml-2 transition-transform group-hover:scale-110 md:ml-3 md:size-12 lg:ml-4 lg:size-15"
+        aria-hidden="true"
       />
-      <span className="text-2xl">دانلود برای گوگل کروم</span>
+      <span className="text-lg md:text-xl lg:text-2xl">
+        دانلود برای گوگل کروم
+      </span>
 
-      <span className="absolute -top-2 -right-2 animate-pulse rounded-full bg-yellow-300 px-2 py-1 text-xs font-bold text-blue-700">
+      <span className="absolute -top-3 -right-1 animate-pulse rounded-full bg-yellow-300 px-1.5 py-0.5 text-xs font-bold text-blue-700 md:-top-2">
         محبوب‌ترین
       </span>
-    </Link>
+    </a>
   );
 };
 

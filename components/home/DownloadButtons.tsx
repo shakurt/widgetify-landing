@@ -1,21 +1,21 @@
 import { FaChrome, FaEdge, FaFirefox, FaOpera, FaBrave } from "react-icons/fa6";
 
+import DownloadButtonPrimary from "@/components/home/DownloadButtonPrimary";
 import { CHROME_EXTENSION_URL } from "@/constants";
 
-import DownloadButtonChrome from "./DownloadButtonPrimary";
 import DownloadButtonSecondary from "./DownloadButtonSecondary";
 
 const DownloadButtons = () => {
   return (
     <section
       className="animate-fade-in-up mb-10 flex flex-col items-center"
-      aria-label="Download Buttons Section"
+      aria-label="بخش دکمه‌های دانلود"
     >
-      <DownloadButtonChrome />
+      <DownloadButtonPrimary />
 
       <div
         className="mt-6 flex flex-wrap justify-center gap-3"
-        aria-label="Secondary Browsers Container"
+        aria-label="مرورگرهای ثانویه"
       >
         <DownloadButtonSecondary
           show={false}
@@ -31,7 +31,7 @@ const DownloadButtons = () => {
           isAvailable={true}
         />
         <DownloadButtonSecondary
-          name="Brave"
+          name="برَیو"
           icon={FaBrave}
           url={CHROME_EXTENSION_URL}
           isAvailable={true}
@@ -52,8 +52,8 @@ const DownloadButtons = () => {
       </div>
 
       <p
-        className="mt-3 max-w-xl text-center text-sm text-gray-500"
-        aria-label="Install Help Text"
+        className="mt-3 max-w-xl text-center text-xs leading-relaxed text-gray-500 md:text-sm"
+        aria-label="راهنمای نصب"
       >
         نصب خیلی راحته! فقط کافیه روی مرورگر مورد نظرت کلیک کنی و دکمه "Add to
         Chrome" رو بزنی

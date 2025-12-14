@@ -85,7 +85,7 @@ const ImageSlider2 = () => {
   }, [startAutoPlay]);
 
   return (
-    <div className="animate-fade-in-delayed">
+    <div className="animate-fade-in-delayed px-4 md:px-6 lg:px-8">
       <div className="relative mx-auto max-w-5xl">
         <div className="animate-slide-up-delayed aspect-video overflow-hidden rounded-3xl bg-linear-to-br from-blue-100 to-purple-100">
           <div className="relative mx-auto h-full w-full">
@@ -100,7 +100,8 @@ const ImageSlider2 = () => {
                   src={image.src}
                   alt={image.alt}
                   fill
-                  loading="eager"
+                  loading={index === 0 ? "eager" : "lazy"}
+                  priority={index === 0}
                   className="object-cover md:object-contain"
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 80vw, 1200px"
                 />
@@ -112,27 +113,27 @@ const ImageSlider2 = () => {
           <button
             type="button"
             onClick={prevSlide}
-            className="absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-3 text-white transition-all hover:scale-110 hover:bg-black/70"
+            className="absolute top-1/2 left-2 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-2 text-white transition-all hover:scale-110 hover:bg-black/70 md:left-4 md:p-3"
             aria-label="تصویر قبلی"
           >
-            <LuChevronLeft size={20} />
+            <LuChevronLeft size={16} className="md:h-5 md:w-5" />
           </button>
           <button
             type="button"
             onClick={nextSlide}
-            className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-3 text-white transition-all hover:scale-110 hover:bg-black/70"
+            className="absolute top-1/2 right-2 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-2 text-white transition-all hover:scale-110 hover:bg-black/70 md:right-4 md:p-3"
             aria-label="تصویر بعدی"
           >
-            <LuChevronRight size={20} />
+            <LuChevronRight size={16} className="md:h-5 md:w-5" />
           </button>
 
           {/* Indicators */}
-          <div className="absolute bottom-4 left-1/2 flex -translate-x-1/2 transform gap-2">
+          <div className="absolute bottom-3 left-1/2 flex -translate-x-1/2 transform flex-row-reverse gap-1 md:bottom-4 md:gap-2">
             {previewImages.map((image, index) => (
               <button
                 key={image.id}
                 onClick={() => goToSlide(index)}
-                className={`h-3 w-3 rounded-full transition-all duration-300 ${
+                className={`h-2 w-2 rounded-full transition-all duration-300 md:h-3 md:w-3 ${
                   index === currentSlide
                     ? "scale-125 bg-white"
                     : "bg-white/50 hover:bg-white/70"
@@ -144,8 +145,8 @@ const ImageSlider2 = () => {
         </div>
 
         {/* Slide Info */}
-        <div className="animate-fade-in-long-delayed absolute bottom-16 left-1/2 hidden -translate-x-1/2 transform rounded-full bg-black/70 px-6 py-3 text-white backdrop-blur-sm sm:block">
-          <span className="text-sm font-medium">
+        <div className="animate-fade-in-long-delayed absolute bottom-12 left-1/2 hidden -translate-x-1/2 transform rounded-full bg-black/70 px-4 py-2 text-white backdrop-blur-sm sm:block md:bottom-16 md:px-6 md:py-3">
+          <span className="text-xs leading-tight font-medium md:text-sm">
             {previewImages[currentSlide].description}
           </span>
         </div>

@@ -19,3 +19,6 @@ const LoadingPage = () => {
 };
 
 export default LoadingPage;
+// https://magicui.design/docs/components/animated-circular-progress-bar
+// https://www.hover.dev/components/toggles
+// https://www.hover.dev/components/links

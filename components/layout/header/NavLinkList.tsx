@@ -1,4 +1,4 @@
-import { LogIn, Shield, HandHeart, MessageSquareWarning } from "lucide-react";
+import { LuHandHeart, LuShield, LuMessageSquareWarning } from "react-icons/lu";
 
 import NavLink from "@/components/layout/header/NavLink";
 
@@ -13,7 +13,7 @@ const NavLinkList: React.FC<NavLinkListProps> = ({ onClose }) => {
         <li>
           <NavLink
             href="/donate"
-            Icon={HandHeart}
+            Icon={LuHandHeart}
             label="حمایت"
             onClick={onClose}
           />
@@ -21,7 +21,7 @@ const NavLinkList: React.FC<NavLinkListProps> = ({ onClose }) => {
         <li>
           <NavLink
             href="/privacy"
-            Icon={Shield}
+            Icon={LuShield}
             label="حریم خصوصی"
             onClick={onClose}
           />
@@ -30,16 +30,8 @@ const NavLinkList: React.FC<NavLinkListProps> = ({ onClose }) => {
           <NavLink
             href="https://feedback.widgetify.ir"
             isExternal={true}
-            Icon={MessageSquareWarning}
+            Icon={LuMessageSquareWarning}
             label="پیشنهاد و انتقادات"
-            onClick={onClose}
-          />
-        </li>
-        <li>
-          <NavLink
-            href="/login"
-            Icon={LogIn}
-            label="ورود / ثبت نام"
             onClick={onClose}
           />
         </li>

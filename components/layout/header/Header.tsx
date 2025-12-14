@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 
-import { Menu } from "lucide-react";
+import { LuMenu } from "react-icons/lu";
 import { useMountedState, useWindowScroll } from "react-use";
 
 import NavLinkList from "@/components/layout/header/NavLinkList";
@@ -38,7 +38,7 @@ const Header = () => {
           onClick={() => setIsMenuOpen(true)}
           className="cursor-pointer rounded bg-white text-gray-600 transition-colors duration-200 hover:bg-gray-100 md:hidden"
         >
-          <Menu size={24} />
+          <LuMenu size={24} />
         </button>
       </div>
 

@@ -1,6 +1,6 @@
 import { useRef } from "react";
 
-import { X } from "lucide-react";
+import { LuX } from "react-icons/lu";
 import { useClickAway, useLockBodyScroll } from "react-use";
 
 import FullLogo from "@/components/logo/FullLogo";
@@ -47,10 +47,10 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
             <button
               type="button"
               onClick={onClose}
-              className="cursor-pointer rounded-lg bg-white p-2 text-gray-600 transition-colors duration-200 hover:bg-gray-100"
+              className="cursor-pointer rounded-lg bg-white text-gray-600 transition-colors duration-200 hover:bg-gray-100"
               aria-label="Close Sidebar"
             >
-              <X size={24} />
+              <LuX size={24} />
             </button>
           </header>
 

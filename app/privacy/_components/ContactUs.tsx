@@ -1,4 +1,4 @@
-import { MdOutgoingMail } from "react-icons/md";
+import { LuMail } from "react-icons/lu";
 
 import { MAILTO_PRIVACY } from "@/constants";
 
@@ -30,9 +30,9 @@ const ContactUs: React.FC<ContactUsProps> = ({ lang }) => {
             href={MAILTO_PRIVACY}
             aria-label="Send email to privacy@widgetify.ir"
           >
-            <MdOutgoingMail
+            <LuMail
               size={16}
-              className="mb-0.5 sm:h-[18px] sm:w-[18px]"
+              className="mb-0.5 sm:h-4.5 sm:w-4.5"
               aria-hidden="true"
             />
             <span>privacy@widgetify.ir</span>

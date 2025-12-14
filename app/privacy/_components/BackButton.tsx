@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { FaArrowLeftLong, FaArrowRightLong } from "react-icons/fa6";
+import { LuArrowLeft, LuArrowRight } from "react-icons/lu";
 
 import { isLanguageFa } from "../_lib/utils";
 
@@ -20,17 +20,13 @@ const BackButton: React.FC<BackButtonProps> = ({ lang }) => {
         }
       >
         {isLanguageFa(lang) ? (
-          <FaArrowRightLong
+          <LuArrowRight
             size={14}
             className="sm:h-4 sm:w-4"
             aria-hidden="true"
           />
         ) : (
-          <FaArrowLeftLong
-            size={14}
-            className="sm:h-4 sm:w-4"
-            aria-hidden="true"
-          />
+          <LuArrowLeft size={14} className="sm:h-4 sm:w-4" aria-hidden="true" />
         )}
         <span>
           {isLanguageFa(lang) ? "بازگشت به صفحه اصلی" : "Return to Home Page"}

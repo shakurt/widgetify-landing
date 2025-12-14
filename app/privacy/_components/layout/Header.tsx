@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { Globe, Shield } from "lucide-react";
+import { LuGlobe, LuShield } from "react-icons/lu";
 
 import { isLanguageFa } from "../../_lib/utils";
 
@@ -15,7 +15,7 @@ const Header: React.FC<HeaderProps> = ({ lang }) => {
       <div className="container max-w-4xl">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2 sm:gap-3">
-            <Shield
+            <LuShield
               size={20}
               className="text-blue-600 sm:h-6 sm:w-6"
               aria-hidden="true"
@@ -33,7 +33,7 @@ const Header: React.FC<HeaderProps> = ({ lang }) => {
               isLanguageFa(lang) ? "Switch to English" : "تغییر به فارسی"
             }
           >
-            <Globe
+            <LuGlobe
               size={14}
               className={`sm:h-4 sm:w-4 ${isLanguageFa(lang) && "mb-1"}`}
               aria-hidden="true"

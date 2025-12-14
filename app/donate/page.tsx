@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { HiOutlineSparkles, HiOutlineExternalLink } from "react-icons/hi";
+import { LuSparkles, LuExternalLink } from "react-icons/lu";
 
 import AnimateOnScroll from "@/components/animations/AnimateOnScroll";
 import SupportersDonation from "@/components/home/SupportersDonation";
@@ -50,7 +50,7 @@ const DonationPage = () => {
           aria-label="حمایت مالی از ویجتی‌فای - Support Widgetify financially"
         >
           <span>🎁 حمایت کنید</span>
-          <HiOutlineExternalLink
+          <LuExternalLink
             size={18}
             className="mr-1 sm:mr-2 sm:h-5 sm:w-5"
             aria-hidden="true"
@@ -86,7 +86,7 @@ const DonationPage = () => {
         <div className="overflow-hidden rounded-2xl bg-linear-to-r from-blue-600 to-purple-600 p-8 text-center text-white shadow-2xl sm:rounded-3xl sm:p-12">
           <div className="relative">
             <div className="animate-bounce-slow mb-6 inline-flex h-16 w-16 items-center justify-center rounded-full bg-white/20 backdrop-blur-sm sm:mb-8 sm:h-20 sm:w-20">
-              <HiOutlineSparkles
+              <LuSparkles
                 size={32}
                 className="sm:h-10 sm:w-10"
                 aria-hidden="true"
@@ -110,7 +110,7 @@ const DonationPage = () => {
               aria-label="حمایت مالی از ویجتی‌فای - دومین دکمه"
             >
               <span>💙 حمایت مالی</span>
-              <HiOutlineExternalLink
+              <LuExternalLink
                 size={18}
                 className="sm:h-5 sm:w-5"
                 aria-hidden="true"

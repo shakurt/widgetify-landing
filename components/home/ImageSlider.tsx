@@ -4,7 +4,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 
 import Image from "next/image";
 
-import { FaChevronLeft, FaChevronRight } from "react-icons/fa6";
+import { LuChevronLeft, LuChevronRight } from "react-icons/lu";
 
 import DarkPreview from "@/assets/slider/preview-dark.png";
 import LightPreview from "@/assets/slider/preview-light.png";
@@ -115,7 +115,7 @@ const ImageSlider2 = () => {
             className="absolute top-1/2 left-4 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-3 text-white transition-all hover:scale-110 hover:bg-black/70"
             aria-label="تصویر قبلی"
           >
-            <FaChevronLeft size={20} />
+            <LuChevronLeft size={20} />
           </button>
           <button
             type="button"
@@ -123,7 +123,7 @@ const ImageSlider2 = () => {
             className="absolute top-1/2 right-4 -translate-y-1/2 cursor-pointer rounded-full bg-black/50 p-3 text-white transition-all hover:scale-110 hover:bg-black/70"
             aria-label="تصویر بعدی"
           >
-            <FaChevronRight size={20} />
+            <LuChevronRight size={20} />
           </button>
 
           {/* Indicators */}

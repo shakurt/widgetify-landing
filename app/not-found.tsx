@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-import { ArrowLeft, Home, Search } from "lucide-react";
+import { LuArrowLeft, LuHouse, LuSearch } from "react-icons/lu";
 
 import { GITHUB_LINK } from "@/constants";
 // import { useDocumentTitle } from "../hooks";
@@ -11,10 +11,10 @@ const NotFound = () => {
   return (
     <>
       {/* Gradient background */}
-      <div className="relative bg-gradient-to-br from-blue-600 to-purple-700 py-16 text-white md:py-20">
+      <div className="relative bg-linear-to-br from-blue-600 to-purple-700 py-16 text-white md:py-20">
         <div className="flex flex-col items-center text-center">
           <div className="bg-opacity-20 mb-6 flex h-20 w-20 items-center justify-center rounded-full bg-white">
-            <Search size={40} className="text-white" />
+            <LuSearch size={40} className="text-white" />
           </div>
           <h1 className="mb-2 text-5xl font-bold md:text-7xl">404</h1>
           <p className="mx-auto max-w-2xl text-xl text-blue-100 md:text-2xl">
@@ -39,7 +39,7 @@ const NotFound = () => {
               href="/"
               className="inline-flex items-center rounded-lg bg-linear-to-br from-blue-600 to-purple-700 px-6 py-3 font-medium text-white transition hover:from-blue-700 hover:to-purple-800"
             >
-              <Home className="ml-2" size={20} />
+              <LuHouse className="ml-2" size={20} />
               صفحه اصلی
             </Link>
 
@@ -47,7 +47,7 @@ const NotFound = () => {
               onClick={() => window.history.back()}
               className="inline-flex items-center rounded-lg border border-gray-200 bg-white px-6 py-3 font-medium transition hover:bg-gray-50"
             >
-              <ArrowLeft className="ml-2" size={20} />
+              <LuArrowLeft className="ml-2" size={20} />
               بازگشت به صفحه قبل
             </button>
           </div>

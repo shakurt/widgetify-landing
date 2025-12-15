@@ -1,17 +1,15 @@
-import { getDonations } from "@/app/lib/data";
+import { getDonations } from "@/lib/data/server-data";
 
 import SupporterDonationCard from "./SupporterDonationCard";
 
-type DonationCardsLayout = "standard" | "gallery";
-
-interface Prop {
+type SupportersDonationProps = {
   count?: number;
-  layout?: DonationCardsLayout;
-}
+};
 
-const SupportersDonation = async ({ count }: Prop) => {
+const SupportersDonation: React.FC<SupportersDonationProps> = async ({
+  count,
+}) => {
   const donations = await getDonations(count);
-  // console.log(donations);
 
   return (
     <div
@@ -28,6 +26,7 @@ const SupportersDonation = async ({ count }: Prop) => {
             avatar={donation.avatar}
             time={donation.time}
             amount={donation.amount}
+            toman_amount={donation.toman_amount}
             currency={donation.currency}
             description={donation.description}
           />

@@ -21,10 +21,10 @@ const Home = () => {
           <ImageSlider />
           <Features />
           <MoreFeaturesComing />
-          <AnimateOnScroll className="slide-up">
-            <Supporters />
-          </AnimateOnScroll>
-          <Contributors />
+          <Supporters />
+          {/* <AnimateOnScroll className="slide-up">
+          </AnimateOnScroll> */}
+          {/* <Contributors /> */}
         </div>
       </section>
     </header>

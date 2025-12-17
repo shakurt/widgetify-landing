@@ -9,7 +9,7 @@ const Products = () => {
       itemScope
       itemType="https://schema.org/ItemList"
     >
-      <h3 id="products-heading" className="mb-2 text-lg font-bold">
+      <h3 id="products-heading" className="mb-2 text-base font-bold md:text-lg">
         محصولات
       </h3>
       <meta itemProp="name" content="محصولات ویجتیفای" />

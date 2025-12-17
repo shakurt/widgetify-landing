@@ -23,7 +23,7 @@ const FooterLink: React.FC<SubFooterLinkProps> = ({
   if (comingSoon)
     return (
       <span
-        className="inline-flex cursor-not-allowed items-center text-gray-400 select-none"
+        className="inline-flex cursor-not-allowed items-center text-xs text-gray-400 select-none sm:text-sm"
         role="text"
         aria-label={`${children} - به زودی`}
       >
@@ -40,7 +40,7 @@ const FooterLink: React.FC<SubFooterLinkProps> = ({
   return (
     <Link
       href={href!}
-      className="text-sm text-gray-500 transition-colors duration-300 hover:text-blue-600"
+      className="text-xs text-gray-500 transition-colors duration-300 hover:text-blue-600 sm:text-sm"
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
       itemProp="url"

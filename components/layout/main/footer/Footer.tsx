@@ -1,10 +1,9 @@
 import Brand from "./Brand";
-import Newsletter from "./Newsletter";
+import LegalLinks from "./LegalLinks";
 import Products from "./Products";
 import QuickLinks from "./QuickLinks";
 import Social from "./Social";
 import SubFooter from "./SubFooter";
-
 const Footer = () => {
   return (
     <footer
@@ -16,14 +15,14 @@ const Footer = () => {
         <Brand />
         <Social />
 
-        <nav
-          className="container my-8 grid grid-cols-1 gap-8 md:grid-cols-3"
+        <div
+          className="container my-8 grid grid-cols-1 gap-8 min-[550px]:grid-cols-3"
           aria-label="لینک‌های فوتر"
         >
           <QuickLinks />
           <Products />
-          <Newsletter />
-        </nav>
+          <LegalLinks />
+        </div>
       </div>
 
       <SubFooter />

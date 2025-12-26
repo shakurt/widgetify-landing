@@ -1,9 +1,9 @@
 import Link from "next/link";
 
+import SupporterDonationList from "@landing/components/home/SupporterDonationList";
 import { LuSparkles, LuExternalLink } from "react-icons/lu";
 
-import AnimateOnScroll from "@/components/animations/AnimateOnScroll";
-import SupporterDonationList from "@/components/home/SupporterDonationList";
+// import AnimateOnScroll from "@/components/animations/AnimateOnScroll";
 import { DONATE_LINK } from "@/lib/constants";
 
 export const metadata = {
@@ -58,26 +58,26 @@ const DonationPage = () => {
         </Link>
       </header>
 
-      <AnimateOnScroll className="slide-up">
-        <section
-          className="container mt-8 sm:mt-12 md:mt-16"
-          aria-labelledby="recent-donations-heading"
-        >
-          <div className="animate-fade-in mb-6 text-center sm:mb-8">
-            <h2
-              id="recent-donations-heading"
-              className="mb-2 text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl"
-            >
-              آخرین حمایت‌ها
-            </h2>
-            <p className="mx-auto max-w-2xl px-4 text-sm leading-relaxed font-light text-gray-700 sm:text-base">
-              حمایت‌های شما به ما انگیزه می‌دهد تا ویجتیفای را روز به روز بهتر
-              کنیم. با تشکر از اعتماد شما.
-            </p>
-          </div>
-          <SupporterDonationList />
-        </section>
-      </AnimateOnScroll>
+      {/* <AnimateOnScroll className="slide-up">
+        </AnimateOnScroll> */}
+      <section
+        className="container mt-8 sm:mt-12 md:mt-16"
+        aria-labelledby="recent-donations-heading"
+      >
+        <div className="animate-fade-in mb-6 text-center sm:mb-8">
+          <h2
+            id="recent-donations-heading"
+            className="mb-2 text-xl font-bold text-gray-900 sm:text-2xl md:text-3xl"
+          >
+            آخرین حمایت‌ها
+          </h2>
+          <p className="mx-auto max-w-2xl px-4 text-sm leading-relaxed font-light text-gray-700 sm:text-base">
+            حمایت‌های شما به ما انگیزه می‌دهد تا ویجتیفای را روز به روز بهتر
+            کنیم. با تشکر از اعتماد شما.
+          </p>
+        </div>
+        <SupporterDonationList />
+      </section>
 
       <section
         className="animate-fade-in-up relative container py-12 sm:py-16 md:py-20"

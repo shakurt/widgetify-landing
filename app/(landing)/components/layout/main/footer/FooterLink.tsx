@@ -29,7 +29,7 @@ const FooterLink: React.FC<SubFooterLinkProps> = ({
       >
         {children}
         <span
-          className="mr-2 rounded-full bg-blue-100 px-2 py-0.5 text-xs font-medium text-blue-600"
+          className="text-primary bg-primary/10 mr-2 rounded-full px-2 py-0.5 text-xs font-medium"
           aria-hidden="true"
         >
           به زودی

@@ -8,7 +8,7 @@ const HeroSection = () => {
       aria-label="بخش اصلی صفحه فرود"
     >
       <h1 className="animate-slide-down py-1 text-center text-4xl font-bold md:text-6xl lg:text-7xl">
-        <span className="bg-linear-to-r from-blue-600 to-blue-700 bg-clip-text leading-relaxed text-blue-600 [-webkit-text-fill-color:transparent] supports-[background-clip:text]:text-transparent">
+        <span className="from-primary text-primary bg-linear-to-r to-[#304ffe] bg-clip-text leading-relaxed [-webkit-text-fill-color:transparent] supports-[background-clip:text]:text-transparent">
           نیوتب مرورگرت رو با ویجتیفای
         </span>
 

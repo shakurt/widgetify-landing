@@ -26,7 +26,7 @@ const FullLogo: React.FC<FullLogoProps> = ({ classname }) => {
         className={mergedClassName}
         priority
       />
-      <span className="mr-2 text-base font-bold text-blue-600 md:text-xl">
+      <span className="text-primary mr-2 text-base font-bold md:text-xl">
         ویجتیفای
       </span>
     </Link>

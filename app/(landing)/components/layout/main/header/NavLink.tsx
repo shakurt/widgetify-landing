@@ -31,8 +31,8 @@ const NavLink: React.FC<NavLinkProps> = ({
       aria-current={isActive ? "page" : undefined}
       className={`flex items-center rounded-md px-3 py-2 transition-colors duration-150 ${
         isActive
-          ? "bg-blue-50 font-medium text-blue-600"
-          : "text-gray-600 hover:bg-gray-50 hover:text-blue-600"
+          ? "bg-primary/10 text-primary font-medium"
+          : "hover:text-primary text-gray-600 hover:bg-gray-50"
       }`}
     >
       <Icon className="ml-1.5 size-4.5" aria-hidden="true" />

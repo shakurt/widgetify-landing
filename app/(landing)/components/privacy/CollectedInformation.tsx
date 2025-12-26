@@ -1,4 +1,5 @@
-import SectionWrapper from "@/components/layout/privacy/SectionWrapper";
+import SectionWrapper from "@landing/components/layout/privacy/SectionWrapper";
+
 import type { PrivacyLanguage } from "@/lib/types";
 import { isLanguageFa } from "@/lib/utils";
 

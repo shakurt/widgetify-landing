@@ -22,7 +22,7 @@ const HeroDownloadButtonSecondary: React.FC<
   const notAvailableStyle =
     "cursor-not-allowed opacity-50 border-0 transition-none hover:shadow-none hover:bg-gray-200 bg-gray-200 hover:scale-100 pointer-events-none";
   const baseStyle =
-    "group focus:ring-opacity-50 relative flex items-center rounded-2xl border-2 border-gray-200 bg-white px-3 py-2 font-medium text-gray-700 transition-all duration-300 hover:scale-105 hover:border-blue-300 hover:bg-gray-50 hover:shadow-lg focus:ring-2 focus:ring-blue-300 focus:outline-none md:px-6 md:py-3";
+    "group relative flex items-center rounded-2xl border-2 border-primary/20 bg-white px-3 py-2 font-medium text-gray-700 transition-all duration-300 hover:scale-105 hover:border-primary hover:bg-primary/5 hover:shadow-lg focus:ring-2 focus:ring-primary focus:outline-none md:px-6 md:py-3";
 
   if (!show) return;
 

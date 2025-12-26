@@ -1,4 +1,4 @@
-import SectionWrapper from "@/components/layout/privacy/SectionWrapper";
+import SectionWrapper from "@landing/components/layout/privacy/SectionWrapper";
 import { MAILTO_PRIVACY } from "@/lib/constants";
 import type { PrivacyLanguage } from "@/lib/types";
 import { isLanguageFa } from "@/lib/utils";

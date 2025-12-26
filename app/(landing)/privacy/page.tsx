@@ -1,18 +1,19 @@
-import Header from "@/components/layout/privacy/Header";
-import BackButton from "@/components/privacy/BackButton";
-import ChangePrivacy from "@/components/privacy/ChangePrivacy";
-import CollectedInformation from "@/components/privacy/CollectedInformation";
-import ContactUs from "@/components/privacy/ContactUs";
-import DataDeletion from "@/components/privacy/DataDeletion";
-import DataProtection from "@/components/privacy/DataProtection";
-import DataSharing from "@/components/privacy/DataSharing";
-import DataUsage from "@/components/privacy/DataUsage";
-import ExtensionPermissions from "@/components/privacy/ExtensionPermissions";
-import GoogleIntegration from "@/components/privacy/GoogleIntegration";
-import Introduction from "@/components/privacy/Introduction";
-import OpenSourceNote from "@/components/privacy/OpenSourceNote";
-import Retention from "@/components/privacy/Retention";
-import Security from "@/components/privacy/Security";
+import Header from "@landing/components/layout/privacy/Header";
+import BackButton from "@landing/components/privacy/BackButton";
+import ChangePrivacy from "@landing/components/privacy/ChangePrivacy";
+import CollectedInformation from "@landing/components/privacy/CollectedInformation";
+import ContactUs from "@landing/components/privacy/ContactUs";
+import DataDeletion from "@landing/components/privacy/DataDeletion";
+import DataProtection from "@landing/components/privacy/DataProtection";
+import DataSharing from "@landing/components/privacy/DataSharing";
+import DataUsage from "@landing/components/privacy/DataUsage";
+import ExtensionPermissions from "@landing/components/privacy/ExtensionPermissions";
+import GoogleIntegration from "@landing/components/privacy/GoogleIntegration";
+import Introduction from "@landing/components/privacy/Introduction";
+import OpenSourceNote from "@landing/components/privacy/OpenSourceNote";
+import Retention from "@landing/components/privacy/Retention";
+import Security from "@landing/components/privacy/Security";
+
 import type { PrivacyLanguage } from "@/lib/types";
 import { isLanguageFa } from "@/lib/utils";
 

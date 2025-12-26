@@ -1,7 +1,7 @@
 @import "tailwindcss";
-@import "./styles/fonts.css";
-@import "./styles/scrollbar.css";
-@import "./styles/animations.css";
+@import "../styles/fonts.css";
+@import "../styles/scrollbar.css";
+@import "../styles/animations.css";
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -42,8 +42,7 @@ body {
     sans-serif;
 }
 
-input[type="email"],
-input[type="password"] {
+input[type="email"] {
   direction: ltr;
   text-align: left;
   font-family: "Inter", sans-serif;
@@ -54,9 +53,9 @@ input[type="password"] {
   @apply cursor-pointer px-3 py-2 text-sm font-medium text-white transition-colors duration-300 disabled:opacity-50;
 }
 .btn-primary {
-  @apply rounded-lg bg-blue-600 hover:bg-blue-700;
+  @apply bg-primary hover:bg-primary/80 rounded-lg;
 }
 
 .btn-outline {
-  @apply rounded-2xl border border-gray-400 text-gray-600 hover:border-blue-400 hover:bg-gray-50 hover:shadow-sm;
+  @apply hover:border-primary rounded-2xl border border-gray-400 text-gray-600 hover:bg-gray-50 hover:shadow-sm;
 }

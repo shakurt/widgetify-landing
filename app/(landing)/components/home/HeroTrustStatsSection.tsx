@@ -8,7 +8,7 @@ const HeroTrustStatsSection = () => {
     >
       <article className="flex flex-col items-center justify-center border-l-2 border-l-gray-200 pl-2 text-center md:pl-6">
         <span
-          className="text-lg font-bold text-blue-600 md:text-xl lg:text-2xl"
+          className="text-primary text-lg font-bold md:text-xl lg:text-2xl"
           dir="ltr"
         >
           <SlotCounter value="33,024" />

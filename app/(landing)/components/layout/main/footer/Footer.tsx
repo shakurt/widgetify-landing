@@ -16,7 +16,7 @@ const Footer = () => {
         <Social />
 
         <div
-          className="container my-8 grid grid-cols-1 gap-8 min-[550px]:grid-cols-3"
+          className="container my-8 grid grid-cols-1 gap-8 min-[450px]:grid-cols-2 min-[450px]:justify-items-center min-[550px]:grid-cols-3"
           aria-label="لینک‌های فوتر"
         >
           <QuickLinks />

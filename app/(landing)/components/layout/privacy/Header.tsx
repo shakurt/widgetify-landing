@@ -11,7 +11,7 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = ({ lang }) => {
   return (
-    <header className="border-b bg-gray-50 py-6 md:py-8" role="banner">
+    <header className="py-6 md:py-8" role="banner">
       <div className="container max-w-4xl">
         <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
           <div className="flex items-center gap-2 sm:gap-3">

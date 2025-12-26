@@ -9,23 +9,21 @@ import SupportersSection from "@landing/components/home/SupportersSection";
 
 const Home = () => {
   return (
-    <div className="min-h-screen w-full">
-      <section
-        className="py-6 md:py-10 lg:py-20"
-        aria-label="معرفی افزونه ویجتیفای"
-      >
-        <div className="container mx-auto flex flex-col gap-6">
-          <HeroSection />
-          <ImageSliderSection />
-          <FeaturesSection />
-          <MoreFeaturesComingSection />
-          <SupportersSection />
-          <ContributorsSection />
-          {/* <AnimateOnScroll className="slide-up">
+    <section
+      className="py-6 md:py-10 lg:py-20"
+      aria-label="معرفی افزونه ویجتیفای"
+    >
+      <div className="container mx-auto flex flex-col gap-6">
+        <HeroSection />
+        <ImageSliderSection />
+        <FeaturesSection />
+        <MoreFeaturesComingSection />
+        <SupportersSection />
+        <ContributorsSection />
+        {/* <AnimateOnScroll className="slide-up">
           </AnimateOnScroll> */}
-        </div>
-      </section>
-    </div>
+      </div>
+    </section>
   );
 };
 

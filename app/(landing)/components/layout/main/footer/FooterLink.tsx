@@ -40,7 +40,7 @@ const FooterLink: React.FC<SubFooterLinkProps> = ({
   return (
     <Link
       href={href!}
-      className="text-xs text-gray-500 transition-colors duration-300 hover:text-blue-600 sm:text-sm"
+      className="hover:text-primary text-xs text-gray-500 transition-colors duration-300 sm:text-sm"
       target={target}
       rel={target === "_blank" ? "noopener noreferrer" : undefined}
       itemProp="url"

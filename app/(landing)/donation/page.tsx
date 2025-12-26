@@ -14,17 +14,22 @@ export const metadata = {
 
 const DonationPage = () => {
   return (
-    <article className="relative min-h-screen overflow-hidden bg-linear-to-br from-blue-50 via-white to-purple-50">
+    <article className="relative overflow-hidden">
       <header
-        className="animate-fade-in relative mx-auto flex max-w-6xl flex-col items-center px-4 py-12 text-center sm:py-16 md:py-20 lg:py-32"
+        className="animate-fade-in relative mx-auto flex max-w-7xl flex-col items-center px-4 py-12 text-center sm:py-16 md:py-20 lg:py-32"
         role="banner"
       >
         <div
           aria-hidden="true"
-          className="pointer-events-none absolute inset-0 overflow-hidden"
+          className="pointer-events-none absolute inset-0"
         >
           <div
             className="animate-blob absolute top-10 right-0 h-64 w-64 rounded-full bg-blue-400 opacity-20 mix-blend-multiply blur-3xl sm:h-80 sm:w-80 md:top-20 md:right-10"
+            aria-hidden="true"
+          />
+
+          <div
+            className="animate-blob bg-primary absolute top-6 left-1/2 h-56 w-56 -translate-x-1/2 rounded-full opacity-20 mix-blend-multiply blur-3xl [animation-delay:1s] sm:h-72 sm:w-72 md:top-8 md:h-80 md:w-80"
             aria-hidden="true"
           />
 

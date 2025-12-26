@@ -12,7 +12,7 @@ export default function RootLayout({
     <html lang="fa" dir="rtl" className="h-full">
       <body
         suppressHydrationWarning
-        className="flex min-h-screen flex-col bg-linear-to-br from-blue-50 via-white to-purple-50"
+        className="flex min-h-screen flex-col bg-gray-50"
       >
         <ToastProvider>
           <Header />

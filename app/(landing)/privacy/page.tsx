@@ -30,12 +30,9 @@ const PrivacyPage: React.FC<PrivacyPageProps> = async ({ searchParams }) => {
   const { lang = "fa" } = await searchParams;
 
   return (
-    <article
-      {...(!isLanguageFa(lang) ? { dir: "ltr" } : { dir: "rtl" })}
-      className="min-h-screen"
-    >
+    <article {...(!isLanguageFa(lang) ? { dir: "ltr" } : { dir: "rtl" })}>
       <Header lang={lang} />
-      <div className="container max-w-4xl space-y-6 py-6 sm:space-y-8 sm:py-8 md:space-y-9">
+      <div className="container mx-auto max-w-4xl space-y-6 border-t py-6 sm:space-y-8 sm:py-8 md:space-y-9">
         <Introduction lang={lang} />
 
         <CollectedInformation lang={lang} />

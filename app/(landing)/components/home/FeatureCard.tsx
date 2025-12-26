@@ -16,7 +16,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   return (
     <article
       role="listitem"
-      className="group overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:border-blue-200 hover:shadow-xl"
+      className="group hover:border-primary/80 overflow-hidden rounded-2xl border border-gray-100 bg-white shadow-lg transition-all duration-300 hover:scale-105 hover:shadow-xl"
       itemScope
       itemType="https://schema.org/SoftwareFeature"
     >
@@ -36,7 +36,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
       </div>
       <div aria-label="محتوای ویژگی" className="p-4 text-right md:p-5 lg:p-6">
         <h3
-          className="mb-1.5 text-base leading-snug font-semibold text-gray-900 transition-colors group-hover:text-blue-600 md:mb-2 md:text-lg lg:text-xl"
+          className="group-hover:text-primary mb-1.5 text-base leading-snug font-semibold text-gray-900 transition-colors md:mb-2 md:text-lg lg:text-xl"
           itemProp="name"
         >
           {title}

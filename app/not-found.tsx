@@ -71,7 +71,7 @@ const NotFound = () => {
             </Link>
 
             <Link
-              href="/donate"
+              href="/donation"
               className="group rounded-lg border border-gray-200 bg-white p-4 transition hover:scale-105 hover:border-blue-300 hover:shadow-lg md:p-5"
             >
               <h4 className="mb-2 text-sm font-semibold text-gray-900 group-hover:text-blue-600 md:text-base">

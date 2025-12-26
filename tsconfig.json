@@ -20,7 +20,8 @@
     ],
     "paths": {
       "@/*": ["./*"],
-      "@auth/*": ["./app/(auth)/*"]
+      "@auth/*": ["./app/(auth)/*"],
+      "@landing/*": ["./app/(landing)/*"]
     }
   },
   "include": [

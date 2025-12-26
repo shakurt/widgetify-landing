@@ -50,5 +50,10 @@ export const extractFullnameInitialLetters = (name?: string | null): string => {
 export const isLanguageFa = (lang: "en" | "fa") => lang === "fa";
 
 // Validators Utils
+export const isEmpty = (text: string) => (text.trim() === "" ? true : false);
+
 export const isEmail = (email: string) =>
   /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+
+export const isStrongPassword = (password: string) =>
+  /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*?&]{8,}$/.test(password);

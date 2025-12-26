@@ -16,8 +16,8 @@ export const INSTAGRAM_LINK = "https://instagram.com/widgetify.ir" as const;
 export const repositories = [
   "https://api.github.com/repos/widgetify-app/widgetify-extension/contributors",
   "https://api.github.com/repos/sajjadmrx/btime-desktop/contributors",
-  "https://api.github.com/repos/widgetify-app/widgetify-pwa/contributors",
   "https://api.github.com/repos/widgetify-app/widgetify-landing/contributors",
+  // "https://api.github.com/repos/widgetify-app/widgetify-pwa/contributors",
 ] as const;
 
 // Donation page

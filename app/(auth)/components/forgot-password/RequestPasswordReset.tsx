@@ -99,6 +99,9 @@ const RequestPasswordReset: React.FC<RequestPasswordResetProps> = ({
             name="email"
             id="email"
             autoComplete="email"
+            aria-label="آدرس ایمیل"
+            aria-required="true"
+            aria-invalid={!!error}
             className="w-full rounded-lg border border-gray-300 p-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none"
             placeholder="example@gmail.com"
             required
@@ -109,6 +112,8 @@ const RequestPasswordReset: React.FC<RequestPasswordResetProps> = ({
         <button
           type="submit"
           disabled={isPending}
+          aria-label="ارسال لینک بازیابی رمز عبور"
+          aria-busy={isPending}
           className={
             isPending
               ? twMerge(baseEmailInputStyles, "cursor-not-allowed bg-gray-400")

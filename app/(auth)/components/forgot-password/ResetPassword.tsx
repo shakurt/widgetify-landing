@@ -89,7 +89,7 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
       </header>
 
       <form action={formAction} className="space-y-4">
-        <div aria-label="Email Input Container">
+        <div>
           <label
             htmlFor="email"
             className="mb-1.5 block text-sm font-medium text-gray-700"
@@ -103,16 +103,21 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
               name="email"
               value={email}
               readOnly
+              aria-readonly="true"
+              aria-label="آدرس ایمیل (فقط خواندنی)"
               className="w-full cursor-not-allowed rounded-lg border border-gray-300 bg-gray-100 p-3 pr-10 text-gray-500"
             />
             <InputTextError message={errorValidations?.email} />
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+            <div
+              className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+              aria-hidden="true"
+            >
               <LuMail size={18} className="text-gray-400" />
             </div>
           </div>
         </div>
 
-        <div aria-label="Password Input Container">
+        <div>
           <label
             htmlFor="password"
             className="mb-1.5 block text-sm font-medium text-gray-700"
@@ -124,6 +129,9 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
               type="password"
               name="password"
               id="password"
+              aria-label="رمز عبور جدید"
+              aria-required="true"
+              aria-invalid={!!errorValidations?.password}
               className={`w-full border p-3 pr-10 text-gray-900 ${
                 errorValidations?.password
                   ? "border-red-300 focus:border-red-500 focus:ring-red-500"
@@ -132,7 +140,10 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
               required
               placeholder="********"
             />
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+            <div
+              className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+              aria-hidden="true"
+            >
               <LuLock
                 size={18}
                 className={
@@ -156,6 +167,9 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
               type="password"
               name="confirm-password"
               id="confirm-password"
+              aria-label="تکرار رمز عبور جدید"
+              aria-required="true"
+              aria-invalid={!!errorValidations?.confirmPassword}
               className={`w-full border p-3 pr-10 text-gray-900 ${
                 errorValidations?.confirmPassword
                   ? "border-red-300 focus:border-red-500 focus:ring-red-500"
@@ -164,7 +178,10 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
               required
               placeholder="********"
             />
-            <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3">
+            <div
+              className="pointer-events-none absolute inset-y-0 right-0 flex items-center pr-3"
+              aria-hidden="true"
+            >
               <LuLock
                 size={18}
                 className={
@@ -188,6 +205,8 @@ const ResetPassword: React.FC<ResetPasswordProps> = ({
           <button
             type="submit"
             disabled={isPending}
+            aria-label="ذخیره رمز عبور جدید"
+            aria-busy={isPending}
             className={`flex w-full items-center justify-center rounded-lg p-3 font-medium text-white transition hover:scale-[1.03] active:scale-[0.97] ${
               isPending
                 ? "cursor-not-allowed bg-gray-400"

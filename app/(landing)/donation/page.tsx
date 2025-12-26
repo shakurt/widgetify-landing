@@ -151,7 +151,7 @@ const DonationPage = () => {
               href={DONATE_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-1.5 rounded-xl bg-white px-6 py-3 text-base font-semibold text-blue-600 shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-50 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600 focus:outline-none sm:gap-2 sm:rounded-2xl sm:px-8 sm:py-4 sm:text-lg"
+              className="text-primary inline-flex items-center gap-1.5 rounded-xl bg-white px-6 py-3 text-base font-semibold shadow-lg transition-all duration-300 hover:scale-105 hover:bg-blue-50 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-purple-600 focus:outline-none sm:gap-2 sm:rounded-2xl sm:px-8 sm:py-4 sm:text-lg"
               aria-label="حمایت مالی از ویجتیفای - دومین دکمه"
             >
               <span>💙 حمایت مالی</span>

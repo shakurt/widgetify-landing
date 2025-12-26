@@ -22,7 +22,7 @@ const OpenSourceNote: React.FC<OpenSourceNote> = ({ lang }) => {
             عمومی در
             <Link
               href={GITHUB_LINK}
-              className="mx-1 text-blue-600 underline-offset-2 hover:underline"
+              className="text-primary mx-1 underline-offset-2 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View Widgetify on GitHub"
@@ -37,7 +37,7 @@ const OpenSourceNote: React.FC<OpenSourceNote> = ({ lang }) => {
             code is publicly available on
             <Link
               href={GITHUB_LINK}
-              className="mx-1 text-blue-600 underline-offset-2 hover:underline"
+              className="text-primary mx-1 underline-offset-2 hover:underline"
               target="_blank"
               rel="noopener noreferrer"
               aria-label="View Widgetify on GitHub"

@@ -102,7 +102,7 @@ const RequestPasswordReset: React.FC<RequestPasswordResetProps> = ({
             aria-label="آدرس ایمیل"
             aria-required="true"
             aria-invalid={!!error}
-            className="w-full rounded-lg border border-gray-300 p-3 text-gray-900 focus:border-transparent focus:ring-2 focus:ring-blue-500 focus:outline-none"
+            className="focus:ring-primary w-full rounded-lg border border-gray-300 p-3 text-gray-900 focus:border-transparent focus:ring-2 focus:outline-none"
             placeholder="example@gmail.com"
             required
           />

@@ -1,6 +1,6 @@
+import SectionWrapper from "@landing/components/layout/privacy/SectionWrapper";
 import { LuMail } from "react-icons/lu";
 
-import SectionWrapper from "@landing/components/layout/privacy/SectionWrapper";
 import { MAILTO_PRIVACY } from "@/lib/constants";
 import type { PrivacyLanguage } from "@/lib/types";
 import { isLanguageFa } from "@/lib/utils";
@@ -24,7 +24,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ lang }) => {
             با ما تماس بگیرید:
           </p>
           <a
-            className="mt-2 flex w-fit items-center gap-1.5 text-sm text-blue-600 underline-offset-2 hover:underline sm:gap-2 sm:text-base"
+            className="text-primary mt-2 flex w-fit items-center gap-1.5 text-sm underline-offset-2 hover:underline sm:gap-2 sm:text-base"
             href={MAILTO_PRIVACY}
             aria-label="Send email to privacy@widgetify.ir"
           >
@@ -43,7 +43,7 @@ const ContactUs: React.FC<ContactUsProps> = ({ lang }) => {
             us via the email below:
           </p>
           <a
-            className="mt-2 flex w-fit items-center gap-1.5 text-sm text-blue-600 underline-offset-2 hover:underline sm:gap-2 sm:text-base"
+            className="text-primary mt-2 flex w-fit items-center gap-1.5 text-sm underline-offset-2 hover:underline sm:gap-2 sm:text-base"
             href={MAILTO_PRIVACY}
             aria-label="Send email to privacy@widgetify.ir"
           >

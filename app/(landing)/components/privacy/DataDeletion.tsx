@@ -1,4 +1,5 @@
 import SectionWrapper from "@landing/components/layout/privacy/SectionWrapper";
+
 import { MAILTO_PRIVACY } from "@/lib/constants";
 import type { PrivacyLanguage } from "@/lib/types";
 import { isLanguageFa } from "@/lib/utils";
@@ -21,7 +22,7 @@ const DataDeletion: React.FC<DataDeletionProps> = ({ lang }) => {
           ایمیل به{" "}
           <a
             href={MAILTO_PRIVACY}
-            className="text-blue-600 underline-offset-2 hover:underline"
+            className="text-primary underline-offset-2 hover:underline"
             aria-label="Send email to privacy@widgetify.ir"
           >
             privacy@widgetify.ir
@@ -34,7 +35,7 @@ const DataDeletion: React.FC<DataDeletionProps> = ({ lang }) => {
           sending an email to{" "}
           <a
             href={MAILTO_PRIVACY}
-            className="text-blue-600 underline-offset-2 hover:underline"
+            className="text-primary underline-offset-2 hover:underline"
             aria-label="Send email to privacy@widgetify.ir"
           >
             privacy@widgetify.ir

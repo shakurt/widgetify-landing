@@ -14,7 +14,7 @@ const BackButton: React.FC<BackButtonProps> = ({ lang }) => {
     <nav className="border-t pt-4 pb-2" aria-label="Privacy page navigation">
       <Link
         href="/"
-        className="inline-flex items-center gap-1.5 text-sm text-blue-600 underline-offset-2 hover:underline sm:text-base"
+        className="text-primary inline-flex items-center gap-1.5 text-sm underline-offset-2 hover:underline sm:text-base"
         aria-label={
           isLanguageFa(lang) ? "بازگشت به صفحه اصلی" : "Return to Home Page"
         }

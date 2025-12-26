@@ -32,7 +32,7 @@ const GoogleIntegration: React.FC<GoogleIntegrationProps> = ({ lang }) => {
             </li>
           </ul>
           <div
-            className="mt-3 border-r-4 border-blue-500 bg-blue-50 p-2.5 sm:mt-4 sm:p-3"
+            className="border-primary mt-3 border-r-4 bg-blue-50 p-2.5 sm:mt-4 sm:p-3"
             role="note"
             aria-label="Important security information"
           >
@@ -62,7 +62,7 @@ const GoogleIntegration: React.FC<GoogleIntegrationProps> = ({ lang }) => {
             </li>
           </ul>
           <div
-            className="mt-3 border-l-4 border-blue-500 bg-blue-50 p-2.5 sm:mt-4 sm:p-3"
+            className="border-primary mt-3 border-l-4 bg-blue-50 p-2.5 sm:mt-4 sm:p-3"
             role="note"
             aria-label="Important security information"
           >

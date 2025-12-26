@@ -66,9 +66,9 @@ const NotFound = () => {
                 <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 md:grid-cols-3 md:gap-4 lg:gap-5">
                   <Link
                     href="/extension"
-                    className="group rounded-lg border border-gray-200 bg-white p-4 transition hover:scale-105 hover:border-blue-300 hover:shadow-lg md:p-5"
+                    className="group hover:border-primary/80 rounded-lg border border-gray-200 bg-white p-4 transition hover:scale-105 hover:shadow-lg md:p-5"
                   >
-                    <h4 className="mb-2 text-sm font-semibold text-gray-900 group-hover:text-blue-600 md:text-base">
+                    <h4 className="group-hover:text-primary mb-2 text-sm font-semibold text-gray-900 md:text-base">
                       اکستنشن مرورگر
                     </h4>
                     <p className="text-xs text-gray-600 md:text-sm">
@@ -78,9 +78,9 @@ const NotFound = () => {
 
                   <Link
                     href="/donation"
-                    className="group rounded-lg border border-gray-200 bg-white p-4 transition hover:scale-105 hover:border-blue-300 hover:shadow-lg md:p-5"
+                    className="group hover:border-primary/80 rounded-lg border border-gray-200 bg-white p-4 transition hover:scale-105 hover:shadow-lg md:p-5"
                   >
-                    <h4 className="mb-2 text-sm font-semibold text-gray-900 group-hover:text-blue-600 md:text-base">
+                    <h4 className="group-hover:text-primary mb-2 text-sm font-semibold text-gray-900 md:text-base">
                       حمایت مالی
                     </h4>
                     <p className="text-xs text-gray-600 md:text-sm">
@@ -92,9 +92,9 @@ const NotFound = () => {
                     href={GITHUB_LINK}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group rounded-lg border border-gray-200 bg-white p-4 transition hover:scale-105 hover:border-blue-300 hover:shadow-lg md:p-5"
+                    className="group hover:border-primary/80 rounded-lg border border-gray-200 bg-white p-4 transition hover:scale-105 hover:shadow-lg md:p-5"
                   >
-                    <h4 className="mb-2 text-sm font-semibold text-gray-900 group-hover:text-blue-600 md:text-base">
+                    <h4 className="group-hover:text-primary mb-2 text-sm font-semibold text-gray-900 md:text-base">
                       مخزن گیت‌هاب
                     </h4>
                     <p className="text-xs text-gray-600 md:text-sm">

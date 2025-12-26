@@ -17,7 +17,7 @@ const Header: React.FC<HeaderProps> = ({ lang }) => {
           <div className="flex items-center gap-2 sm:gap-3">
             <LuShield
               size={20}
-              className="text-blue-600 sm:h-6 sm:w-6"
+              className="text-primary sm:h-6 sm:w-6"
               aria-hidden="true"
             />
             <h1 className="text-xl font-bold sm:text-2xl md:text-3xl">

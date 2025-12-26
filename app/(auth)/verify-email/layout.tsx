@@ -1,34 +1,42 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "تأیید ایمیل | ویجتیفای",
+  title: "تأیید ایمیل - فعال‌سازی حساب کاربری | ویجتیفای",
   description:
-    "تأیید حساب کاربری ویجتیفای - با تأیید ایمیل خود به تمامی امکانات افزونه ویجتیفای دسترسی پیدا کنید",
+    "تأیید و فعال‌سازی حساب کاربری ویجتیفای. با کلیک بر روی لینک ارسال شده به ایمیل خود، حساب کاربری خود را تأیید کنید و به تمامی امکانات افزونه مرورگر ویجتیفای دسترسی داشته باشید.",
   keywords: [
-    "تأیید ایمیل",
+    "تأیید ایمیل ویجتیفای",
+    "فعال‌سازی حساب",
+    "تایید ایمیل",
+    "email verification",
+    "verify email",
     "ویجتیفای",
     "احراز هویت",
+    "حساب کاربری",
     "افزونه مرورگر",
-    "نیو تب",
+    "Widgetify email verification",
+    "activate account",
   ],
   openGraph: {
     title: "تأیید ایمیل | ویجتیفای",
     description:
-      "تأیید حساب خود و دسترسی به تمام امکانات افزونه نیو تب ویجتیفای",
+      "تأیید و فعال‌سازی حساب کاربری ویجتیفای و دسترسی به تمام امکانات افزونه نیو تب",
     type: "website",
     locale: "fa_IR",
+    url: "https://widgetify.app/verify-email",
   },
   twitter: {
     card: "summary",
     title: "تأیید ایمیل | ویجتیفای",
-    description: "تأیید حساب خود و دسترسی به تمام امکانات ویجتیفای",
+    description: "تأیید و فعال‌سازی حساب کاربری ویجتیفای",
   },
   alternates: {
-    canonical: "/verify-email",
+    canonical: "https://widgetify.app/verify-email",
   },
   robots: {
     index: false,
     follow: false,
+    noarchive: true,
   },
 };
 

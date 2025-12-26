@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import Link from "next/link";
 
 import SupporterDonationList from "@landing/components/home/SupporterDonationList";
@@ -6,10 +8,49 @@ import { LuSparkles, LuExternalLink } from "react-icons/lu";
 // import AnimateOnScroll from "@/components/animations/AnimateOnScroll";
 import { DONATE_LINK } from "@/lib/constants";
 
-export const metadata = {
-  title: "حمایت از ویجتیفای | Support Widgetify",
+export const metadata: Metadata = {
+  title: "حمایت مالی از ویجتیفای - Support Widgetify Development",
   description:
-    "با حمایت مالی از ویجتیفای، به ما کمک کنید تا خدمات بهتری ارائه دهیم. Support Widgetify to help us provide better services.",
+    "با حمایت مالی از پروژه متن‌باز ویجتیفای، به توسعه و بهبود این افزونه رایگان کمک کنید. تمام کمک‌های مالی صرف نگهداری سرورها و توسعه ویژگی‌های جدید می‌شود. Support open-source Widgetify browser extension.",
+  keywords: [
+    "حمایت از ویجتیفای",
+    "کمک مالی",
+    "دونیت",
+    "donate",
+    "support widgetify",
+    "حمایت از متن‌باز",
+    "open source donation",
+    "sponsor",
+    "اسپانسر",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "حمایت مالی از ویجتیفای - Support Widgetify",
+    description:
+      "با حمایت مالی از پروژه متن‌باز ویجتیفای، به ما در ارائه خدمات بهتر کمک کنید",
+    url: "https://widgetify.app/donation",
+    type: "website",
+    images: [
+      {
+        url: "/donation-og.png",
+        width: 1200,
+        height: 630,
+        alt: "حمایت از ویجتیفای",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "حمایت مالی از ویجتیفای",
+    description: "با حمایت از پروژه متن‌باز ویجتیفای، به توسعه آن کمک کنید",
+    images: ["/donation-twitter.png"],
+  },
+  alternates: {
+    canonical: "https://widgetify.app/donation",
+  },
 };
 
 const DonationPage = () => {

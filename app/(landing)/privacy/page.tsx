@@ -1,3 +1,5 @@
+import { Metadata } from "next";
+
 import Header from "@landing/components/layout/privacy/Header";
 import BackButton from "@landing/components/privacy/BackButton";
 import ChangePrivacy from "@landing/components/privacy/ChangePrivacy";
@@ -17,9 +19,38 @@ import Security from "@landing/components/privacy/Security";
 import type { PrivacyLanguage } from "@/lib/types";
 import { isLanguageFa } from "@/lib/utils";
 
-export const metadata = {
-  title: "Privacy Policy | Widgetify",
-  description: "Widgetify privacy policy and data protection information",
+export const metadata: Metadata = {
+  title: "سیاست حفظ حریم خصوصی - Widgetify Privacy Policy",
+  description:
+    "سیاست حفظ حریم خصوصی افزونه ویجتیفای. اطلاعات کامل درباره نحوه جمع‌آوری، استفاده و حفاظت از داده‌های شما. Widgetify privacy policy and GDPR compliance information.",
+  keywords: [
+    "حریم خصوصی ویجتیفای",
+    "privacy policy",
+    "GDPR",
+    "حفاظت از داده",
+    "امنیت اطلاعات",
+    "data protection",
+    "ویجتیفای",
+    "Widgetify privacy",
+  ],
+  robots: {
+    index: true,
+    follow: true,
+  },
+  openGraph: {
+    title: "سیاست حفظ حریم خصوصی - Widgetify Privacy Policy",
+    description:
+      "اطلاعات کامل درباره نحوه حفاظت از حریم خصوصی و داده‌های کاربران در افزونه ویجتیفای",
+    url: "https://widgetify.app/privacy",
+    type: "website",
+  },
+  alternates: {
+    canonical: "https://widgetify.app/privacy",
+    languages: {
+      "fa-IR": "https://widgetify.app/privacy?lang=fa",
+      "en-US": "https://widgetify.app/privacy?lang=en",
+    },
+  },
 };
 
 type PrivacyPageProps = {

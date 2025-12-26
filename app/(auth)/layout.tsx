@@ -1,7 +1,23 @@
+import type { Metadata } from "next";
+
 import "@/app/globals.css";
 import Header from "@auth/components/layout/Header";
 
 import { ToastProvider } from "@/components/ui/ToastContext";
+
+export const metadata: Metadata = {
+  title: {
+    default: "احراز هویت | ویجتیفای",
+    template: "%s | ویجتیفای",
+  },
+  description:
+    "صفحات احراز هویت و مدیریت حساب کاربری افزونه ویجتیفای - ورود، ثبت‌نام، بازیابی رمز عبور و تأیید ایمیل",
+  robots: {
+    index: false,
+    follow: false,
+    noarchive: true,
+  },
+};
 
 export default function RootLayout({
   children,

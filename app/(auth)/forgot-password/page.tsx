@@ -1,8 +1,8 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 
 import RequestPasswordReset from "@auth/components/forgot-password/RequestPasswordReset";
 import ResetPassword from "@auth/components/forgot-password/ResetPassword";
@@ -11,14 +11,24 @@ import ShowRequestPasswordResetSuccessMessage from "@auth/components/forgot-pass
 
 const ForgotPassword = () => {
   const searchParams = useSearchParams();
+  const router = useRouter();
 
   const token = searchParams.get("token");
   const emailFromUrl = searchParams.get("email");
 
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [email, setEmail] = useState(emailFromUrl || "");
+  const [savedToken, setSavedToken] = useState<string | null>(token);
 
-  const isResetMode = Boolean(token && emailFromUrl);
+  const isResetMode = Boolean(savedToken && emailFromUrl);
+
+  useEffect(() => {
+    if (token && emailFromUrl) {
+      setSavedToken(token);
+      // Remove only token from URL, keep email
+      router.replace(`/forgot-password?email=${emailFromUrl}`);
+    }
+  }, [token, emailFromUrl, router]);
 
   const handleRequestSuccess = (submittedEmail: string) => {
     setIsSubmitted(true);
@@ -38,7 +48,7 @@ const ForgotPassword = () => {
       return (
         <ResetPassword
           email={emailFromUrl || ""}
-          token={token!}
+          token={savedToken!}
           handleResetSuccess={handleResetSuccess}
         />
       );

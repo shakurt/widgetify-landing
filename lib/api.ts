@@ -1,4 +1,4 @@
-const BASE_URL = process.env.API_BASE_URL || "https://api.widgetify.ir";
+const BASE_URL = process.env.NEXT_PUBLIC_API || "https://api.widgetify.ir";
 
 export const api = async (
   endpoint: string,

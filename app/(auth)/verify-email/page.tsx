@@ -1,11 +1,9 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
-
-import { LuCircleAlert, LuCircleCheck } from "react-icons/lu";
+import { LuCircleAlert, LuCircleCheck, LuLoader } from "react-icons/lu";
 
 import { postVerifyEmail } from "@/lib/auth";
 import { isEmail } from "@/lib/utils";
@@ -21,42 +19,52 @@ const VerifyEmailPage = () => {
 
   useEffect(() => {
     const verifyEmail = async () => {
-      const response = await postVerifyEmail(token!, email!);
-
-      if (response.success) setIsSuccess(true);
-      else {
-        setError(response.message);
+      try {
+        const response = await postVerifyEmail(token!, email!);
+        if (response.success) {
+          setIsSuccess(true);
+        } else {
+          setError(
+            response.message || "متأسفانه فرآیند تایید با خطا مواجه شد."
+          );
+        }
+      } catch (err) {
+        setError("ارتباط با سرور برقرار نشد. لطفا اینترنت خود را بررسی کنید.");
+      } finally {
         setIsVerifying(false);
       }
     };
 
     if (token && email) {
       if (isEmail(email)) verifyEmail();
-      else setError("آدرس ایمیل نامعتبر است.");
+      else {
+        setError("فرمت آدرس ایمیل وارد شده صحیح نیست.");
+        setIsVerifying(false);
+      }
     } else {
-      setError(
-        "لینک تایید ایمیل نامعتبر است. لطفاً مطمئن شوید که از لینک صحیح استفاده می‌کنید."
-      );
+      setError("لینک تایید منقضی شده یا نامعتبر است. لطفاً دوباره تلاش کنید.");
       setIsVerifying(false);
     }
   }, [token, email]);
 
+  const cardStyles =
+    "max-w-md mx-auto space-y-6 rounded-2xl border p-6 text-center shadow-sm sm:p-10";
+
   if (isVerifying)
     return (
       <article
-        className="space-y-4 rounded-xl border border-gray-200 bg-white p-4 text-center shadow-lg transition sm:space-y-5 sm:p-6 md:p-8"
+        className={`${cardStyles} border-gray-100 bg-white`}
         aria-busy="true"
-        aria-label="درحال تایید ایمیل"
       >
-        <div className="mx-auto inline-flex h-14 w-14 animate-pulse items-center justify-center rounded-2xl bg-linear-to-br from-blue-500 to-blue-600 sm:h-16 sm:w-16">
-          <div className="h-6 w-6 animate-spin rounded-full border-2 border-white border-t-transparent sm:h-8 sm:w-8"></div>
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-slate-50">
+          <LuLoader className="h-8 w-8 animate-spin text-slate-600" />
         </div>
-        <div className="space-y-2 sm:space-y-3">
-          <h2 className="text-xl leading-tight font-bold text-gray-900 sm:text-2xl md:text-3xl">
-            درحال تایید ایمیل
+        <div className="space-y-2">
+          <h2 className="text-2xl font-black text-gray-900">
+            یه لحظه صبر کن...
           </h2>
-          <p className="text-sm leading-relaxed text-gray-600 sm:text-base">
-            لطفاً صبر کنید، درحال بررسی و تایید آدرس ایمیل شما هستیم...
+          <p className="text-sm leading-relaxed text-gray-500 sm:text-base">
+            داریم اطلاعاتت رو چک می‌کنیم تا همه چی برای شروع آماده بشه.
           </p>
         </div>
       </article>
@@ -65,59 +73,65 @@ const VerifyEmailPage = () => {
   if (isSuccess)
     return (
       <article
-        className="animate-slide-up space-y-4 rounded-xl border border-green-200 bg-green-50/50 p-4 text-center shadow-lg transition sm:space-y-5 sm:p-6 md:p-8"
-        role="status"
-        aria-live="polite"
+        className={`${cardStyles} animate-in fade-in zoom-in border-emerald-100 bg-emerald-50/30 duration-300`}
       >
-        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-green-400 to-green-600 sm:h-16 sm:w-16">
-          <LuCircleCheck className="h-6 w-6 text-white sm:h-8 sm:w-8" />
+        <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-emerald-100">
+          <LuCircleCheck className="h-8 w-8 text-emerald-600" />
         </div>
-        <div className="space-y-2 sm:space-y-3">
-          <h2 className="text-xl leading-tight font-bold text-green-900 sm:text-2xl md:text-3xl">
-            ایمیل تایید شد!
+
+        <div className="space-y-3">
+          <h2 className="text-2xl font-black text-emerald-900">
+            هورا! حسابت فعال شد
           </h2>
-          <p className="text-sm leading-relaxed text-green-700 sm:text-base">
-            آدرس ایمیل شما با موفقیت تایید شد. اکنون می‌توانید از تمامی امکانات
-            حساب کاربری خود استفاده کنید.
+          <p className="text-sm leading-relaxed text-emerald-800/90 sm:text-base">
+            تایید ایمیل با موفقیت انجام شد. حالا می‌تونی از تمام قابلیت‌های
+            <span className="font-bold text-emerald-900"> افزونه نیوتب </span> و
+            <span className="font-bold text-emerald-900">
+              {" "}
+              اپلیکیشن ویجتیفای{" "}
+            </span>
+            استفاده کنی.
           </p>
         </div>
-        <nav className="flex flex-col gap-2">
+
+        <div className="flex flex-col gap-3 pt-2">
           <Link
             href="/"
-            className="inline-flex items-center justify-center rounded-lg border border-green-300 bg-green-600 px-4 py-2.5 font-semibold text-white transition hover:border-green-400 hover:bg-green-700 sm:px-5 sm:py-3"
+            className="block w-full rounded-xl bg-emerald-600 py-3.5 text-sm font-bold text-white shadow-sm shadow-emerald-200 transition-all hover:bg-emerald-700 active:scale-[0.98]"
           >
-            بازگشت به صفحه اصلی
+            بزن بریم به ویجتیفای
           </Link>
-        </nav>
+        </div>
       </article>
     );
-  else
-    return (
-      <article
-        className="animate-slide-up space-y-4 rounded-xl border border-red-200 bg-red-50/50 p-4 text-center shadow-lg transition sm:space-y-5 sm:p-6 md:p-8"
-        role="alert"
-      >
-        <div className="mx-auto inline-flex h-14 w-14 items-center justify-center rounded-2xl bg-linear-to-br from-red-400 to-red-600 sm:h-16 sm:w-16">
-          <LuCircleAlert className="h-6 w-6 text-white sm:h-8 sm:w-8" />
-        </div>
-        <div className="space-y-2 sm:space-y-3">
-          <h2 className="text-xl leading-tight font-bold text-red-900 sm:text-2xl md:text-3xl">
-            خطا در تایید ایمیل
-          </h2>
-          <p className="text-sm leading-relaxed text-red-700 sm:text-base">
-            {error}
-          </p>
-        </div>
-        <nav className="flex flex-col gap-2">
-          <Link
-            href="/"
-            className="inline-flex items-center justify-center rounded-lg border border-red-300 bg-red-600 px-4 py-2.5 font-semibold text-white transition hover:border-red-400 hover:bg-red-700 sm:px-5 sm:py-3"
-          >
-            بازگشت به صفحه اصلی
-          </Link>
-        </nav>
-      </article>
-    );
+
+  return (
+    <article
+      className={`${cardStyles} animate-in fade-in zoom-in border-red-100 bg-red-50/30 duration-300`}
+    >
+      <div className="mx-auto flex h-16 w-16 items-center justify-center rounded-full bg-red-100">
+        <LuCircleAlert className="h-8 w-8 text-red-600" />
+      </div>
+
+      <div className="space-y-2">
+        <h2 className="text-2xl font-black text-red-900">
+          آخ! یه مشکلی پیش اومد
+        </h2>
+        <p className="text-sm leading-relaxed text-red-700/80 sm:text-base">
+          {error}
+        </p>
+      </div>
+
+      <div className="pt-2">
+        <Link
+          href="/"
+          className="block w-full rounded-xl bg-gray-900 py-3.5 text-sm font-bold text-white transition-all hover:bg-black active:scale-[0.98]"
+        >
+          برگشت به صفحه اصلی
+        </Link>
+      </div>
+    </article>
+  );
 };
 
 export default VerifyEmailPage;

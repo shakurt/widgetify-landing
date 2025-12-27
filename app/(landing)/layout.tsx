@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import "@/app/globals.css";
 import Footer from "@landing/components/layout/main/footer/Footer";
 import Header from "@landing/components/layout/main/header/Header";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: {
@@ -82,6 +83,37 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="fa" dir="rtl" className="h-full">
+      <head>
+        <Script id="clarity-script" strategy="afterInteractive">
+          {`
+            (function (c, l, a, r, i, t, y) {
+              c[a] = c[a] || function () {
+                (c[a].q = c[a].q || []).push(arguments);
+              };
+              t = l.createElement(r);
+              t.async = 1;
+              t.src = "https://www.clarity.ms/tag/" + i;
+              y = l.getElementsByTagName(r)[0];
+              y.parentNode.insertBefore(t, y);
+            })(window, document, "clarity", "script", "ur7mnks7ui");
+          `}
+        </Script>
+
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-RJ08KS8BD3"
+          strategy="afterInteractive"
+        />
+
+        <Script id="ga-script" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-RJ08KS8BD3');
+          `}
+        </Script>
+      </head>
+
       <body
         suppressHydrationWarning
         className="flex min-h-screen flex-col bg-gray-50"

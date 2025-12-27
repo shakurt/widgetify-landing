@@ -22,26 +22,26 @@ export const postRequestPasswordReset = async (
         return {
           success: false,
           message:
-            "تعداد درخواست‌های بازیابی رمز عبور به حد مجاز رسیده است. لطفاً بعداً تلاش کنید.",
+            "اووه! خیلی عجله داری. تعداد درخواست‌هات زیاد شد، کمی صبر کن و دوباره امتحان کن.",
         };
     }
 
     if (data.message === "RESET_PASSWORD_REQUEST_SUCCESS") {
       return {
         success: true,
-        message: "ایمیل بازیابی رمز عبور با موفقیت ارسال شد.",
+        message:
+          "لینک بازیابی رمز عبور برای شما ارسال شد. لطفاً صندوق ورودی (و پوشه Spam) ایمیلتان را چک کنید.",
       };
     }
 
     return {
       success: false,
-      message: "خطایی رخ داده است. لطفاً مجدداً تلاش کنید.",
+      message: "یه مشکلی پیش اومد. مطمئنی اینترنت وصله؟",
     };
-  } catch (error) {
-    console.error("Error POST Request Password Reset:", error);
+  } catch {
     return {
       success: false,
-      message: "Something went wrong!",
+      message: "آخ! مثل اینکه ارتباطمون با سرور قطع شده.",
     };
   }
 };
@@ -63,8 +63,6 @@ export const postPasswordReset = async (
     });
 
     const data: postPasswordResetResponse = await res.json();
-    console.log("in lib");
-    console.log(data);
 
     if (!res.ok) {
       if (data.formValidation?.length > 0) {
@@ -72,12 +70,12 @@ export const postPasswordReset = async (
         for (const error of data.formValidation) {
           if (error.property === "password") {
             errors.password =
-              "رمز عبور باید حداقل ۸ کاراکتر و شامل حداقل یک حرف و یک عدد باشد";
+              "رمزت خیلی ساده‌ست! باید حداقل ۸ کاراکتر و ترکیبی از حروف و اعداد باشه.";
           }
         }
         return {
           success: false,
-          message: "لطفاً خطاهای فرم را برطرف کنید",
+          message: "لطفاً خطاهای فرم رو برطرف کن تا بتونیم ادامه بدیم.",
           error: errors,
         };
       }
@@ -86,24 +84,26 @@ export const postPasswordReset = async (
     if (res.status === 401) {
       return {
         success: false,
-        message: "توکن نامعتبر یا منقضی شده است. لطفاً دوباره تلاش کنید.",
+        message:
+          "این لینک دیگه کار نمی‌کنه! یا منقضی شده یا قبلاً ازش استفاده کردی.",
       };
     }
+
     if (data.message === "PASSWORD_CHANGED")
       return {
         success: true,
-        message: "رمز عبور با موفقیت تغییر یافت.",
+        message:
+          "ایول! رمزت عوض شد. حالا با خیال راحت برگرد به دنیای ویجتیفای.",
       };
 
     return {
       success: false,
-      message: "خطا در تغییر رمز عبور. لطفاً مجدداً تلاش کنید.",
+      message: "تغییر رمز با شکست مواجه شد. یه بار دیگه شانس‌ت رو امتحان کن.",
     };
   } catch (error) {
-    console.error("Error POST Password Reset:", error);
     return {
       success: false,
-      message: "Something went wrong!",
+      message: "مثل اینکه یه جای کار می‌لنگه! دوباره تلاش می‌کنی؟",
     };
   }
 };
@@ -112,6 +112,7 @@ type VerifyEmailResponse = {
   data: null;
   message: "EMAIL_VERIFIED" | "VERIFICATION_FAILED";
 };
+
 export const postVerifyEmail = async (
   token: string,
   email: string
@@ -122,31 +123,32 @@ export const postVerifyEmail = async (
       method: "POST",
     });
 
-    if (!res.ok)
-      return {
-        success: false,
-        message: "خطایی رخ داده است. لطفاً مجدداً تلاش کنید.",
-      };
-
     const data: VerifyEmailResponse = await res.json();
-    if (data.message === "EMAIL_VERIFIED")
-      return { success: true, message: "ایمیل با موفقیت تایید شد." };
-    if (data.message === "VERIFICATION_FAILED")
+
+    if (res.ok || data.message === "EMAIL_VERIFIED") {
+      return {
+        success: true,
+        message:
+          "هورا! حساب تو فعال شد. حالا می‌تونی از ابزارهای ویجتیفای استفاده کنی.",
+      };
+    }
+
+    if (data.message === "VERIFICATION_FAILED") {
       return {
         success: false,
         message:
-          "تایید ایمیل ناموفق بود. لینک ممکن است منقضی شده یا قبلاً استفاده شده باشد.",
+          "این لینک تایید معتبر نیست. شاید منقضی شده یا قبلاً حساب رو فعال کردی.",
       };
-    return {
-      success: false,
-      message: "خطا در تایید ایمیل. لطفاً مجدداً تلاش کنید.",
-    };
-  } catch (error) {
-    console.error("Error POST Verify Email:", error);
+    }
 
     return {
       success: false,
-      message: "Something went wrong!",
+      message: "تایید ایمیل انجام نشد. دوباره امتحان کن.",
+    };
+  } catch {
+    return {
+      success: false,
+      message: "ارتباط برقرار نشد. وضعیت اینترنتت رو چک کن!",
     };
   }
 };
